@@ -27,5 +27,5 @@ class StreamCamera:
             " -r " + str(self.framerate) + \
             " -i " + self.inputdevice + \
             " -c:v " + self.outputcodec + \
-            " -f udp udp:// " + self.destination + ":" + str(self.port)
+            " -f mpegts udp://" + self.destination + ":" + str(self.port)
         subprocess.call(self.execute, shell=True)
