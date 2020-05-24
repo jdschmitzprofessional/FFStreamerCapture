@@ -4,31 +4,34 @@ from datetime import datetime as dt
 
 
 class CaptureStream:
-    def __init__(self, sourceaddress=str, sourceport=int, retrievalmethod=str,sshkey=str, savefolder=str, remoteuser=str):
-        self.remoteuser=remoteuser
-        self.sourceaddress=sourceaddress
-        self.sourceport = sourceport
-        self.execute = str
-        self.retrievalmethod = retrievalmethod
-        self.retreiveconfig = str
-        self.sdp = str
-        self.sshkey = sshkey
-        self.savefolder=savefolder
-    def configure(self, filepath, filedest):
-        self.sdp = filedest
+    def __init__(self, root=str,config=dict):
+            self.name = config['name']
+            self.functional_root = root
+            self.remoteuser = config['user']
+            self.sourceaddress = config['address']
+            self.sourceport = config['port']
+            self.retrievalmethod = config['retrieval_method']
+            self.sshkey = config['keyfile']
+            self.savefolder = config['savefolder']
+            self.configpath = config['configpath']
+            self.sdp = str
+            self.execute = str
+            self.retreiveconfig = str
+
+    def configure(self):
+        self.sdp = self.functional_root + "/" + self.name + ".sdp"
+        print(self.sdp)
         retreiveconfig = "scp -i " + self.sshkey + " " + \
                                 self.remoteuser + "@" + self.sourceaddress + ":" + \
-                                filepath + " " + \
-                                filedest
+                                self.configpath + " " + \
+                                self.sdp
         try:
             subprocess.call(retreiveconfig, shell=True)
         except Exception as e:
             print(e)
 
     def capture(self):
-        if type(self.sdp) != str:
-            print("Please configure first.")
-            return False
+
         while True:
             execute = "ffmpeg -protocol_whitelist rtp,udp,file" + \
                         " -i " + self.sdp + \
@@ -38,4 +41,6 @@ class CaptureStream:
             print(execute)
             subprocess.call(execute,shell=True)
 
+    def getConfig(self):
+        return self.__dict__
 
