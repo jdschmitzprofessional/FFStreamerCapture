@@ -1,12 +1,12 @@
-import ipaddress
-import ffmpeg
-
-
-
-
+import StreamCamera
+import multiprocessing
 if __name__ == "__main__":
-    destinationAddress = '192.168.50.111'
-    print(destinationAddress)
     port = 6000
-    cam = ffmpeg.StreamCamera(inputdevice="/dev/video0",resolution="640x480",aspectratio="4:3",destination=destinationAddress,framerate=30, inputcodec="video4linux2", outputcodec="h264_omx", port=6000)
-    cam.record()
+    porchcam = StreamCamera.CaptureStream(sourceaddress='192.168.50.125',
+                                          sourceport=6000,
+                                          retrievalmethod='ssh',
+                                          remoteuser='pi',
+                                          sshkey='/opt/key/id_rsa',
+                                          savefolder="/tmp")
+    porchcam.configure('/home/pi/config.sdp', '/tmp/eastgaragecam.sdp')
+    porchcam.capture()

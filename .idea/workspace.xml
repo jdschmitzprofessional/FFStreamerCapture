@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6caeb799-f030-4268-8c4f-a0ada73c9652" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/StreamCamera/StreamCapture.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ffmpeg/StreamCamera.py" beforeDir="false" afterPath="$PROJECT_DIR$/ffmpeg/StreamCamera.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/StreamCamera.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamCamera/StreamCamera.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamCamera/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/ffmpeg.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/receiver.py" beforeDir="false" afterPath="$PROJECT_DIR$/receiver.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -103,11 +108,30 @@
       <option name="project" value="LOCAL" />
       <updated>1590266433701</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="testing on a raspberry pi zero">
+      <created>1590266990344</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1590266990344</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initializing repository" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initializing repository" />
+    <MESSAGE value="testing on a raspberry pi zero" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing on a raspberry pi zero" />
   </component>
 </project>
