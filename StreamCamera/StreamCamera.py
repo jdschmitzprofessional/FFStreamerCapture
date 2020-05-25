@@ -22,6 +22,6 @@ class StreamCamera:
                        " -h " + self.resolution[1] + \
                        " -ih" + \
                        " -fps " + self.framerate + \
-                       " -o udp://" + self.destination + ":" + self.port
+                       " -o udp://" + self.destination + ":" + str(self.port)
             subprocess.call(self.execute, shell=True)
             time.sleep(5)

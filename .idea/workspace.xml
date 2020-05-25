@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6caeb799-f030-4268-8c4f-a0ada73c9652" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StreamCamera/StreamCamera.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamCamera/StreamCamera.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StreamCamera/StreamCapture.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamCamera/StreamCapture.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/receiver.py" beforeDir="false" afterPath="$PROJECT_DIR$/receiver.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590362501795</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Resolved previous issue with multiple streams to a single interface, switched from using ffmpeg on the remote cameras to vanilla raspivid which doesn't tax the system.&#10;Remote cameras now insert the timestamp as when the server does it the timestamp doesn't jump ahead when the stream gets interrupted (eg 20 seconds pass with no new video feed and the timer does not advance).">
+      <created>1590375592990</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1590375592990</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -138,12 +141,14 @@
     <MESSAGE value="testing on a raspberry pi zero" />
     <MESSAGE value="Got poc working, saving to prep for multiprocessing" />
     <MESSAGE value="issue with multiple streams going to the same interface, all but one will always fail." />
-    <option name="LAST_COMMIT_MESSAGE" value="issue with multiple streams going to the same interface, all but one will always fail." />
+    <MESSAGE value="Resolved previous issue with multiple streams to a single interface, switched from using ffmpeg on the remote cameras to vanilla raspivid which doesn't tax the system.&#10;Remote cameras now insert the timestamp as when the server does it the timestamp doesn't jump ahead when the stream gets interrupted (eg 20 seconds pass with no new video feed and the timer does not advance)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Resolved previous issue with multiple streams to a single interface, switched from using ffmpeg on the remote cameras to vanilla raspivid which doesn't tax the system.&#10;Remote cameras now insert the timestamp as when the server does it the timestamp doesn't jump ahead when the stream gets interrupted (eg 20 seconds pass with no new video feed and the timer does not advance)." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="579" y="34" width="747" height="878" key="CommitChangelistDialog2" timestamp="1590362501596">
-      <screen x="0" y="0" width="1918" height="950" />
+    <state x="579" y="34" width="747" height="878" key="CommitChangelistDialog2" timestamp="1590375592849">
+      <screen x="0" y="0" width="1918" height="948" />
     </state>
+    <state x="579" y="34" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1590375592849" />
     <state x="579" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.950@0.0.1918.950" timestamp="1590362501596" />
     <state width="1892" height="242" key="GridCell.Tab.0.bottom" timestamp="1590375051197">
       <screen x="0" y="0" width="1918" height="948" />
@@ -161,13 +166,15 @@
       <screen x="0" y="0" width="1918" height="948" />
     </state>
     <state width="1892" height="242" key="GridCell.Tab.0.right/0.0.1918.948@0.0.1918.948" timestamp="1590375051196" />
-    <state x="557" y="210" key="Vcs.Push.Dialog.v2" timestamp="1590362505178">
-      <screen x="0" y="0" width="1918" height="950" />
+    <state x="557" y="210" key="Vcs.Push.Dialog.v2" timestamp="1590375594574">
+      <screen x="0" y="0" width="1918" height="948" />
     </state>
+    <state x="557" y="210" key="Vcs.Push.Dialog.v2/0.0.1918.948@0.0.1918.948" timestamp="1590375594574" />
     <state x="557" y="210" key="Vcs.Push.Dialog.v2/0.0.1918.950@0.0.1918.950" timestamp="1590362505178" />
-    <state x="620" y="206" width="672" height="678" key="search.everywhere.popup" timestamp="1590362468945">
-      <screen x="0" y="0" width="1918" height="950" />
+    <state x="620" y="206" width="672" height="677" key="search.everywhere.popup" timestamp="1590375502142">
+      <screen x="0" y="0" width="1918" height="948" />
     </state>
+    <state x="620" y="206" width="672" height="677" key="search.everywhere.popup/0.0.1918.948@0.0.1918.948" timestamp="1590375502142" />
     <state x="620" y="206" width="672" height="678" key="search.everywhere.popup/0.0.1918.950@0.0.1918.950" timestamp="1590362468945" />
   </component>
 </project>
