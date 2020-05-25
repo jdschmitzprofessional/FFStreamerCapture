@@ -128,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590375776337</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Resolved previous issue with multiple streams to a single interface, switched from using ffmpeg on the remote cameras to vanilla raspivid which doesn't tax the system.&#10;Remote cameras now insert the timestamp as when the server does it the timestamp doesn't jump ahead when the stream gets interrupted (eg 20 seconds pass with no new video feed and the timer does not advance).">
+      <created>1590375891400</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1590375891400</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -152,10 +159,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Resolved previous issue with multiple streams to a single interface, switched from using ffmpeg on the remote cameras to vanilla raspivid which doesn't tax the system.&#10;Remote cameras now insert the timestamp as when the server does it the timestamp doesn't jump ahead when the stream gets interrupted (eg 20 seconds pass with no new video feed and the timer does not advance)." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2" timestamp="1590375776258">
+    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2" timestamp="1590375891300">
       <screen x="0" y="0" width="1918" height="948" />
     </state>
-    <state x="156" y="34" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1590375776258" />
+    <state x="156" y="34" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1590375891300" />
     <state x="579" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.950@0.0.1918.950" timestamp="1590362501596" />
     <state width="1892" height="242" key="GridCell.Tab.0.bottom" timestamp="1590375051197">
       <screen x="0" y="0" width="1918" height="948" />
@@ -173,15 +180,15 @@
       <screen x="0" y="0" width="1918" height="948" />
     </state>
     <state width="1892" height="242" key="GridCell.Tab.0.right/0.0.1918.948@0.0.1918.948" timestamp="1590375051196" />
-    <state x="557" y="210" key="Vcs.Push.Dialog.v2" timestamp="1590375777723">
+    <state x="557" y="210" key="Vcs.Push.Dialog.v2" timestamp="1590375892418">
       <screen x="0" y="0" width="1918" height="948" />
     </state>
-    <state x="557" y="210" key="Vcs.Push.Dialog.v2/0.0.1918.948@0.0.1918.948" timestamp="1590375777723" />
+    <state x="557" y="210" key="Vcs.Push.Dialog.v2/0.0.1918.948@0.0.1918.948" timestamp="1590375892418" />
     <state x="557" y="210" key="Vcs.Push.Dialog.v2/0.0.1918.950@0.0.1918.950" timestamp="1590362505178" />
-    <state x="620" y="206" width="672" height="677" key="search.everywhere.popup" timestamp="1590375767822">
+    <state x="620" y="206" width="672" height="677" key="search.everywhere.popup" timestamp="1590375885418">
       <screen x="0" y="0" width="1918" height="948" />
     </state>
-    <state x="620" y="206" width="672" height="677" key="search.everywhere.popup/0.0.1918.948@0.0.1918.948" timestamp="1590375767822" />
+    <state x="620" y="206" width="672" height="677" key="search.everywhere.popup/0.0.1918.948@0.0.1918.948" timestamp="1590375885418" />
     <state x="620" y="206" width="672" height="678" key="search.everywhere.popup/0.0.1918.950@0.0.1918.950" timestamp="1590362468945" />
   </component>
 </project>
