@@ -10,8 +10,7 @@ if __name__ == "__main__":
     cameramap = {}
     for camera in constants.cameras:
         print(camera)
-        cameramap[camera] = StreamCamera.CaptureStream(root=constants.functional_root, config=constants.cameras[camera])
-        cameramap[camera].configure()
+        cameramap[camera] = StreamCamera.CaptureStream(listen=constants.local_address, root=constants.program_root, config=constants.cameras[camera])
     for camera in cameramap:
         print(cameramap[camera])
         multiprocessing.Process(target=startRecoring,args=(camera,)).start()
