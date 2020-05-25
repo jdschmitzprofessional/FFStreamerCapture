@@ -18,8 +18,8 @@ class StreamCamera:
         while True:
             self.execute = "raspivid -a 12" + \
                        " -t 0" + \
-                       " -w " + self.resolution[0] + \
-                       " -h " + self.resolution[1] + \
+                       " -w " + str(self.resolution[0]) + \
+                       " -h " + str(self.resolution[1]) + \
                        " -ih" + \
                        " -fps " + self.framerate + \
                        " -o udp://" + self.destination + ":" + str(self.port)
