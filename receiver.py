@@ -12,7 +12,7 @@ if __name__ == "__main__":
         print(camera)
         cameramap[camera] = StreamCamera.CaptureStream(listen=constants.local_address, root=constants.program_root, config=constants.cameras[camera])
     for camera in cameramap:
-        print(cameramap[camera])
+        print(camera)
         multiprocessing.Process(target=startRecoring,args=(camera,)).start()
     # porchcam = StreamCamera.CaptureStream(sourceaddress='192.168.50.125',
     #                                       sourceport=6000,

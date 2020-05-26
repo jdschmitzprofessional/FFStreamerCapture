@@ -1,4 +1,5 @@
 import subprocess
+import logging
 
 
 class StreamCamera:
@@ -13,8 +14,7 @@ class StreamCamera:
         self.framerate = framerate
 
     def record(self):
-        # construct string to pass to StreamCamera, initializes stream to central server.
-            self.execute = "raspivid -a 12" + \
+            self.execute = "raspivid -ae 32,0xff,0x808000 -a 12" + \
                        " -t 0" + \
                        " -w " + str(self.resolution[0]) + \
                        " -h " + str(self.resolution[1]) + \
