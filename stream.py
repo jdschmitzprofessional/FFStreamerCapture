@@ -3,17 +3,20 @@ import time
 import datetime as dt
 import subprocess
 import constants
+import re
 
 import sys
 
 if __name__ == "__main__":
     # figure out which camera this is by .the IP address.
     # Causes issues if the camera is trying to record through a NAT router.
-    # uses a subprocess to determine addresses to limit additional modules needed.
-    addresses = subprocess.check_output(
-        'ip addr show | grep -Eo "[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+"').split('\n')
+    # uses a subprocess and regex to determine addresses to limit additional moreceiverdules needed
+    addr_pattern = re.compile("[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+")
+    process_output = subprocess.call(
+        'ip addr show', shell=True)
+    addresses = re.search(addr_pattern, str(process_output))
     for camera in constants.cameras:
-        if camera['address'] in addresses:
+        if camera['address'] in addresses.groups():
             config = constants.cameras[camera]
     if not config:
         print("No matching configuration could be determined.")

@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6caeb799-f030-4268-8c4f-a0ada73c9652" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/stream.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StreamCamera/StreamCamera.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamCamera/StreamCamera.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StreamCamera/StreamCapture.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamCamera/StreamCapture.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/receiver.py" beforeDir="false" afterPath="$PROJECT_DIR$/receiver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/receiver.py" beforeDir="false" afterPath="$PROJECT_DIR$/receive.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream.py" beforeDir="false" afterPath="$PROJECT_DIR$/stream.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +51,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/receiver.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/receive.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -192,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590670308764</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Making cameras more dynamic and use the same config. Also comments.">
+      <created>1590706195290</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1590706195290</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -217,13 +221,14 @@
     <MESSAGE value="Working on long-term testing. Attempting to track why frames drop when they do. Implementing logging." />
     <MESSAGE value="Adjusted receiver codec to copy to avoid unnecessary CPU util, adjusted timestamps on cameras to print with a black box for visibility." />
     <MESSAGE value="Adjusting bitrate on hardware encoding to optimize quality/file size" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjusting bitrate on hardware encoding to optimize quality/file size" />
+    <MESSAGE value="Making cameras more dynamic and use the same config. Also comments." />
+    <option name="LAST_COMMIT_MESSAGE" value="Making cameras more dynamic and use the same config. Also comments." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="579" y="34" width="747" height="878" key="CommitChangelistDialog2" timestamp="1590670308616">
-      <screen x="0" y="0" width="1918" height="950" />
+    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2" timestamp="1590706195174">
+      <screen x="0" y="0" width="1918" height="948" />
     </state>
-    <state x="156" y="34" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1590449541371" />
+    <state x="156" y="34" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1590706195174" />
     <state x="579" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.950@0.0.1918.950" timestamp="1590670308616" />
     <state x="156" y="34" key="CommitChangelistDialog2/0.0.1920.949@0.0.1920.949" timestamp="1590458910379" />
     <state width="1895" height="241" key="GridCell.Tab.0.bottom" timestamp="1590704791531">
@@ -274,16 +279,16 @@
       <screen x="0" y="0" width="1918" height="950" />
     </state>
     <state width="1892" height="302" key="GridCell.Tab.1.right/0.0.1918.950@0.0.1918.950" timestamp="1590635939833" />
-    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1590670310800">
-      <screen x="0" y="0" width="1918" height="950" />
-    </state>
-    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1918.948@0.0.1918.948" timestamp="1590449544993" />
-    <state x="557" y="210" key="Vcs.Push.Dialog.v2/0.0.1918.950@0.0.1918.950" timestamp="1590670310800" />
-    <state x="558" y="210" key="Vcs.Push.Dialog.v2/0.0.1920.949@0.0.1920.949" timestamp="1590458911541" />
-    <state x="617" y="155" width="676" height="636" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590705741074">
+    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1590706197572">
       <screen x="0" y="0" width="1918" height="948" />
     </state>
-    <state x="617" y="155" width="676" height="636" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1918.948@0.0.1918.948" timestamp="1590705741074" />
+    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1918.948@0.0.1918.948" timestamp="1590706197572" />
+    <state x="557" y="210" key="Vcs.Push.Dialog.v2/0.0.1918.950@0.0.1918.950" timestamp="1590670310800" />
+    <state x="558" y="210" key="Vcs.Push.Dialog.v2/0.0.1920.949@0.0.1920.949" timestamp="1590458911541" />
+    <state x="617" y="155" width="676" height="636" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590707810179">
+      <screen x="0" y="0" width="1918" height="948" />
+    </state>
+    <state x="617" y="155" width="676" height="636" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1918.948@0.0.1918.948" timestamp="1590707810179" />
     <state x="620" y="206" width="672" height="677" key="search.everywhere.popup" timestamp="1590704447447">
       <screen x="0" y="0" width="1918" height="948" />
     </state>
