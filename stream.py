@@ -12,11 +12,13 @@ if __name__ == "__main__":
     # Causes issues if the camera is trying to record through a NAT router.
     # uses a subprocess and regex to determine addresses to limit additional moreceiverdules needed
     addr_pattern = re.compile("[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+")
-    process_output = subprocess.call(
-        'ip addr show', shell=True)
-    addresses = re.search(addr_pattern, str(process_output))
-    for camera in constants.cameras:
-        if camera['address'] in addresses.groups():
+    process_output = subprocess.run(
+        'ip addr show', shell=True, stdout=subprocess.PIPE)
+
+    addresses = re.findall(addr_pattern, str(process_output.stdout))
+
+    for camera in constants.cameras:ssh
+        if camera['address'] in addresses:
             config = constants.cameras[camera]
     if not config:
         print("No matching configuration could be determined.")

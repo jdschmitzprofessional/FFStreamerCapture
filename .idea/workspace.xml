@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6caeb799-f030-4268-8c4f-a0ada73c9652" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/receiver.py" beforeDir="false" afterPath="$PROJECT_DIR$/receive.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stream.py" beforeDir="false" afterPath="$PROJECT_DIR$/stream.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -196,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590706195290</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added method for determining IP address.">
+      <created>1590708058439</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1590708058439</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -222,13 +227,14 @@
     <MESSAGE value="Adjusted receiver codec to copy to avoid unnecessary CPU util, adjusted timestamps on cameras to print with a black box for visibility." />
     <MESSAGE value="Adjusting bitrate on hardware encoding to optimize quality/file size" />
     <MESSAGE value="Making cameras more dynamic and use the same config. Also comments." />
-    <option name="LAST_COMMIT_MESSAGE" value="Making cameras more dynamic and use the same config. Also comments." />
+    <MESSAGE value="Added method for determining IP address." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added method for determining IP address." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2" timestamp="1590706195174">
+    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2" timestamp="1590708058351">
       <screen x="0" y="0" width="1918" height="948" />
     </state>
-    <state x="156" y="34" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1590706195174" />
+    <state x="156" y="34" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1590708058351" />
     <state x="579" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.950@0.0.1918.950" timestamp="1590670308616" />
     <state x="156" y="34" key="CommitChangelistDialog2/0.0.1920.949@0.0.1920.949" timestamp="1590458910379" />
     <state width="1895" height="241" key="GridCell.Tab.0.bottom" timestamp="1590704791531">
@@ -279,10 +285,10 @@
       <screen x="0" y="0" width="1918" height="950" />
     </state>
     <state width="1892" height="302" key="GridCell.Tab.1.right/0.0.1918.950@0.0.1918.950" timestamp="1590635939833" />
-    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1590706197572">
+    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1590708059606">
       <screen x="0" y="0" width="1918" height="948" />
     </state>
-    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1918.948@0.0.1918.948" timestamp="1590706197572" />
+    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1918.948@0.0.1918.948" timestamp="1590708059606" />
     <state x="557" y="210" key="Vcs.Push.Dialog.v2/0.0.1918.950@0.0.1918.950" timestamp="1590670310800" />
     <state x="558" y="210" key="Vcs.Push.Dialog.v2/0.0.1920.949@0.0.1920.949" timestamp="1590458911541" />
     <state x="617" y="155" width="676" height="636" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590707810179">
