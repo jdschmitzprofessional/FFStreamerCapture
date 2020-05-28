@@ -14,11 +14,12 @@ class StreamCamera:
         self.framerate = framerate
 
     def record(self):
-            self.execute = "raspivid -ae 14,0x00,0x8080FF -a 12" + \
+            self.execute = "raspivid -ae 14,0x00,0x00,20,20 -a 12" + \
                        " -t 0" + \
                        " -w " + str(self.resolution[0]) + \
                        " -h " + str(self.resolution[1]) + \
                        " -ih" + \
+                       " -sh 100" + \
                        " -fps " + str(self.framerate) + \
                        " -o udp://" + self.destination + ":" + str(self.port)
             subprocess.call(self.execute, shell=True)
