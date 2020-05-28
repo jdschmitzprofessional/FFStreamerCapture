@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     addresses = re.findall(addr_pattern, str(process_output.stdout))
 
-    for camera in constants.cameras:ssh
+    for camera in constants.cameras:
         if camera['address'] in addresses:
             config = constants.cameras[camera]
     if not config:

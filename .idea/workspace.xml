@@ -201,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590708058439</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fixed subprocess call">
+      <created>1590708590419</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1590708590419</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -228,13 +235,14 @@
     <MESSAGE value="Adjusting bitrate on hardware encoding to optimize quality/file size" />
     <MESSAGE value="Making cameras more dynamic and use the same config. Also comments." />
     <MESSAGE value="Added method for determining IP address." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added method for determining IP address." />
+    <MESSAGE value="fixed subprocess call" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed subprocess call" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2" timestamp="1590708058351">
+    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2" timestamp="1590708590339">
       <screen x="0" y="0" width="1918" height="948" />
     </state>
-    <state x="156" y="34" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1590708058351" />
+    <state x="156" y="34" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1590708590339" />
     <state x="579" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.950@0.0.1918.950" timestamp="1590670308616" />
     <state x="156" y="34" key="CommitChangelistDialog2/0.0.1920.949@0.0.1920.949" timestamp="1590458910379" />
     <state width="1895" height="241" key="GridCell.Tab.0.bottom" timestamp="1590704791531">
@@ -285,10 +293,10 @@
       <screen x="0" y="0" width="1918" height="950" />
     </state>
     <state width="1892" height="302" key="GridCell.Tab.1.right/0.0.1918.950@0.0.1918.950" timestamp="1590635939833" />
-    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1590708059606">
+    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1590708595813">
       <screen x="0" y="0" width="1918" height="948" />
     </state>
-    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1918.948@0.0.1918.948" timestamp="1590708059606" />
+    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1918.948@0.0.1918.948" timestamp="1590708595813" />
     <state x="557" y="210" key="Vcs.Push.Dialog.v2/0.0.1918.950@0.0.1918.950" timestamp="1590670310800" />
     <state x="558" y="210" key="Vcs.Push.Dialog.v2/0.0.1920.949@0.0.1920.949" timestamp="1590458911541" />
     <state x="617" y="155" width="676" height="636" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590707810179">
