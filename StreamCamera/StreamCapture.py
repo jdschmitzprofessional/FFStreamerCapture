@@ -13,9 +13,8 @@ class CaptureStream:
     def capture(self):
         while True:
             execute = "ffmpeg" + \
+                      " -hwaccel vaapi -vaapi_device /dev/dri/by-path/pci-0000\:13\:00.0-render" + \
                       " -i udp://" + self.address + ":" + str(self.sourceport) + \
-                      " -r 30" + \
-                      " -c:v copy" + \
                       " -t 600 " + \
                       self.savefolder + "/" + dt.now().strftime('%Y-%m-%d-%H-%M-%S') + ".mkv"
             print(execute)
