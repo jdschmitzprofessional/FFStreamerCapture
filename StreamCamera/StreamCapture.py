@@ -14,14 +14,14 @@ class CaptureStream:
         ### empty string initialization, populates in capture method
         self.execute = str
         ### port to restream on. Calculates arbitrarily if not provided.
-        if config['restream_port']:
+        try:
             self.restream_port = config['restream_port']
-        else:
+        except KeyError:
             self.restream_port = self.sourceport + 200
         ### address to restream to. Uses same as input address if not provided.
-        if config['restream_address']:
+        try:
             self.restream_address = config['restream_address']
-        else:
+        except KeyError:
             self.restream_address = self.address
 
     def capture(self):

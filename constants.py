@@ -1,5 +1,5 @@
 central_server = '192.168.50.35'
-
+logfile = "/var/log/camera.log"
 cameras = {
     "eastgaragecam": {
         "name": "eastgarage",

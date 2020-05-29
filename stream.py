@@ -1,30 +1,11 @@
 import StreamCamera
 import time
 import datetime as dt
-import subprocess
 import constants
-import re
-
-import sys
-
-def find_config():
-    addr_pattern = re.compile("[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+")
-    process_output = subprocess.run(
-        'ip addr show', shell=True, stdout=subprocess.PIPE)
-    addresses = re.findall(addr_pattern, str(process_output.stdout))
-    for camera in constants.cameras:
-        if constants.cameras[camera]['address'] in addresses:
-            config = constants.cameras[camera]
-    if not config:
-        print("No matching configuration could be determined.")
-        sys.exit(1)
-    return config
 
 
-if __name__ == "__main__":
-    # figure out which camera this is by .the IP address.
-    # Causes issues if the camera is trying to record through a NAT router.
-    # uses a subprocess and regex to determine addresses to limit additional moreceiverdules needed
+
+def stream():
 
     # instantiate the stream camera
     config = find_config()
