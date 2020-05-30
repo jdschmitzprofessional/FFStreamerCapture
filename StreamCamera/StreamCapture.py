@@ -11,6 +11,10 @@ class CaptureStream:
         self.sourceport = config['port']
         ### folder to save files to
         self.savefolder = config['savefolder']
+        ### set the transfer bitrate
+        self.bitrate = config['bitrate']
+        ### set the framerate to force synchronicity
+        self.framerate = config['framerate']
         ### empty string initialization, populates in capture method
         self.execute = str
         ### port to restream on. Calculates arbitrarily if not provided.
@@ -30,6 +34,7 @@ class CaptureStream:
             ### hwaccel vaapi... uses vaapi hardware decoding, maps to the pci id for an RX570.
             ### -i udp...   where the stream for this instance is coming from
             ### -c:v h264_vaapi... specifies to use vaapi for re-encoding as well at a bitrate of 1.5Mb/s.
+            ### -framerate ... specifies frame to force synchronicity with the remote camera.
             ### self.savefolder... specifies a dynamically named output file.
             ### -c:v copy... options from here are for the re-stream. Specifies to do nothing and just rebroadcast.
             ### -flags global... specifies to include headers on all packets in case something starts in the middle.
@@ -38,11 +43,12 @@ class CaptureStream:
             execute = "ffmpeg" + \
                       " -hwaccel vaapi -hwaccel_output_format vaapi -hwaccel_device /dev/dri/by-path/pci-0000\:13\:00.0-render" + \
                       " -i udp://" + self.address + ":" + str(self.sourceport) + \
-                      " -c:v h264_vaapi -b:v 1500K" + \
-                      " -t 600  -f " + \
+                      " -c:v h264_vaapi -b:v " + self.bitrate + \
+                      " -t 600 " + \
+                      " -framerate " + str(self.framerate) + " " + \
                       self.savefolder + "/" + dt.now().strftime('%Y-%m-%d-%H-%M-%S') + ".mp4" + \
                       " -c:v copy" + \
                       " -flags global_header" + \
-                      " -f h264 udp://" + self.address + ":" + str(self.restream_port)
+                      " -f h264 udp://" + self.restream_address + ":" + str(self.restream_port)
             print(execute)
             subprocess.call(execute, shell=True)

@@ -9,11 +9,13 @@ import multiprocessing
 def startRecoring(target):
     cameramap[target].capture()
 
+
 def receive():
-    logging.basicConfig(filename=constants.logfile, level=logging.INFO)
-    logging.info("Receiver program initialized")
-    cameramap = {}
     for camera in constants.cameras:
-        cameramap[camera] = StreamCamera.CaptureStream(listen=constants.central_server, config=constants.cameras[camera])
+        cameramap[camera] = StreamCamera.CaptureStream(listen=constants.central_server,
+                                                       config=constants.cameras[camera])
     for camera in cameramap:
-        multiprocessing.Process(target=startRecoring,args=(camera,)).start()
+        multiprocessing.Process(target=startRecoring, args=(camera,)).start()
+
+cameramap = {}
+receive()

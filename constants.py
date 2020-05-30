@@ -7,7 +7,8 @@ cameras = {
         "address": "192.168.50.125",
         "savefolder": "/mnt/eastgarage",
         "framerate": 30,
-        "resolution": "1280x720"
+        "resolution": "1280x720",
+        "bitrate": "1.5M"
     },
     "porchcam": {
         "name": "porch",
@@ -15,6 +16,7 @@ cameras = {
         "address": "192.168.50.124",
         "savefolder": "/mnt/porch",
         "framerate": 30,
-        "resolution": "1280x720"
+        "resolution": "1280x720",
+        "bitrate": "1.5M"
     }
 }

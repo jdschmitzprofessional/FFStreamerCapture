@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6caeb799-f030-4268-8c4f-a0ada73c9652" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StreamCamera/StreamCamera.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamCamera/StreamCamera.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StreamCamera/StreamCapture.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamCamera/StreamCapture.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/receive.py" beforeDir="false" afterPath="$PROJECT_DIR$/receive.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stream.py" beforeDir="false" afterPath="$PROJECT_DIR$/stream.py" afterDir="false" />
     </list>
@@ -41,7 +42,28 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FFStreamerCapture" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="receiver" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="FFStreamerCapture" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -65,6 +87,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.receiver" />
       </list>
     </recent_temporary>
@@ -227,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590708899550</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="created main class that determines role of device based on config">
+      <created>1590720806278</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1590720806278</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -257,46 +287,47 @@
     <MESSAGE value="fixed subprocess call" />
     <MESSAGE value="deleted some trailing garbage" />
     <MESSAGE value="Fixed a misreference" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed a misreference" />
+    <MESSAGE value="created main class that determines role of device based on config" />
+    <option name="LAST_COMMIT_MESSAGE" value="created main class that determines role of device based on config" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2" timestamp="1590708899471">
+    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2" timestamp="1590720806168">
       <screen x="0" y="0" width="1918" height="948" />
     </state>
-    <state x="156" y="34" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1590708899471" />
+    <state x="156" y="34" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1590720806168" />
     <state x="579" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.950@0.0.1918.950" timestamp="1590670308616" />
     <state x="156" y="34" key="CommitChangelistDialog2/0.0.1920.949@0.0.1920.949" timestamp="1590458910379" />
-    <state width="1895" height="241" key="GridCell.Tab.0.bottom" timestamp="1590709163383">
-      <screen x="0" y="0" width="1918" height="948" />
+    <state width="1897" height="240" key="GridCell.Tab.0.bottom" timestamp="1590866447039">
+      <screen x="0" y="0" width="1920" height="949" />
     </state>
-    <state width="1895" height="241" key="GridCell.Tab.0.bottom/0.0.1918.948@0.0.1918.948" timestamp="1590709163383" />
-    <state width="1892" height="242" key="GridCell.Tab.0.bottom/0.0.1918.950@0.0.1918.950" timestamp="1590671462611" />
+    <state width="1895" height="241" key="GridCell.Tab.0.bottom/0.0.1918.948@0.0.1918.948" timestamp="1590865530766" />
+    <state width="1895" height="241" key="GridCell.Tab.0.bottom/0.0.1918.950@0.0.1918.950" timestamp="1590755608755" />
     <state width="1896" height="242" key="GridCell.Tab.0.bottom/0.0.1919.949@0.0.1919.949" timestamp="1590695681059" />
-    <state width="1892" height="242" key="GridCell.Tab.0.bottom/0.0.1920.949@0.0.1920.949" timestamp="1590459941574" />
+    <state width="1897" height="240" key="GridCell.Tab.0.bottom/0.0.1920.949@0.0.1920.949" timestamp="1590866447039" />
     <state width="937" height="242" key="GridCell.Tab.0.bottom/0.0.1920.951@0.0.1920.951" timestamp="1590676744942" />
-    <state width="1895" height="241" key="GridCell.Tab.0.center" timestamp="1590709163382">
-      <screen x="0" y="0" width="1918" height="948" />
+    <state width="1897" height="240" key="GridCell.Tab.0.center" timestamp="1590866447038">
+      <screen x="0" y="0" width="1920" height="949" />
     </state>
-    <state width="1895" height="241" key="GridCell.Tab.0.center/0.0.1918.948@0.0.1918.948" timestamp="1590709163382" />
-    <state width="1892" height="242" key="GridCell.Tab.0.center/0.0.1918.950@0.0.1918.950" timestamp="1590671462610" />
+    <state width="1895" height="241" key="GridCell.Tab.0.center/0.0.1918.948@0.0.1918.948" timestamp="1590865530765" />
+    <state width="1895" height="241" key="GridCell.Tab.0.center/0.0.1918.950@0.0.1918.950" timestamp="1590755608754" />
     <state width="1896" height="242" key="GridCell.Tab.0.center/0.0.1919.949@0.0.1919.949" timestamp="1590695681056" />
-    <state width="1892" height="242" key="GridCell.Tab.0.center/0.0.1920.949@0.0.1920.949" timestamp="1590459941572" />
+    <state width="1897" height="240" key="GridCell.Tab.0.center/0.0.1920.949@0.0.1920.949" timestamp="1590866447038" />
     <state width="937" height="242" key="GridCell.Tab.0.center/0.0.1920.951@0.0.1920.951" timestamp="1590676744941" />
-    <state width="1895" height="241" key="GridCell.Tab.0.left" timestamp="1590709163381">
-      <screen x="0" y="0" width="1918" height="948" />
+    <state width="1897" height="240" key="GridCell.Tab.0.left" timestamp="1590866447038">
+      <screen x="0" y="0" width="1920" height="949" />
     </state>
-    <state width="1895" height="241" key="GridCell.Tab.0.left/0.0.1918.948@0.0.1918.948" timestamp="1590709163381" />
-    <state width="1892" height="242" key="GridCell.Tab.0.left/0.0.1918.950@0.0.1918.950" timestamp="1590671462609" />
+    <state width="1895" height="241" key="GridCell.Tab.0.left/0.0.1918.948@0.0.1918.948" timestamp="1590865530765" />
+    <state width="1895" height="241" key="GridCell.Tab.0.left/0.0.1918.950@0.0.1918.950" timestamp="1590755608753" />
     <state width="1896" height="242" key="GridCell.Tab.0.left/0.0.1919.949@0.0.1919.949" timestamp="1590695681056" />
-    <state width="1892" height="242" key="GridCell.Tab.0.left/0.0.1920.949@0.0.1920.949" timestamp="1590459941572" />
+    <state width="1897" height="240" key="GridCell.Tab.0.left/0.0.1920.949@0.0.1920.949" timestamp="1590866447038" />
     <state width="937" height="242" key="GridCell.Tab.0.left/0.0.1920.951@0.0.1920.951" timestamp="1590676744940" />
-    <state width="1895" height="241" key="GridCell.Tab.0.right" timestamp="1590709163382">
-      <screen x="0" y="0" width="1918" height="948" />
+    <state width="1897" height="240" key="GridCell.Tab.0.right" timestamp="1590866447039">
+      <screen x="0" y="0" width="1920" height="949" />
     </state>
-    <state width="1895" height="241" key="GridCell.Tab.0.right/0.0.1918.948@0.0.1918.948" timestamp="1590709163382" />
-    <state width="1892" height="242" key="GridCell.Tab.0.right/0.0.1918.950@0.0.1918.950" timestamp="1590671462610" />
+    <state width="1895" height="241" key="GridCell.Tab.0.right/0.0.1918.948@0.0.1918.948" timestamp="1590865530766" />
+    <state width="1895" height="241" key="GridCell.Tab.0.right/0.0.1918.950@0.0.1918.950" timestamp="1590755608754" />
     <state width="1896" height="242" key="GridCell.Tab.0.right/0.0.1919.949@0.0.1919.949" timestamp="1590695681058" />
-    <state width="1892" height="242" key="GridCell.Tab.0.right/0.0.1920.949@0.0.1920.949" timestamp="1590459941573" />
+    <state width="1897" height="240" key="GridCell.Tab.0.right/0.0.1920.949@0.0.1920.949" timestamp="1590866447039" />
     <state width="937" height="242" key="GridCell.Tab.0.right/0.0.1920.951@0.0.1920.951" timestamp="1590676744941" />
     <state width="1892" height="302" key="GridCell.Tab.1.bottom" timestamp="1590635939833">
       <screen x="0" y="0" width="1918" height="950" />

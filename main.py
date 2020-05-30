@@ -3,12 +3,12 @@ import subprocess
 import re
 import stream
 import receive
+import logging
+
 
 # figure out which camera/server this is by .the IP address.
 # Causes issues if the camera is trying to record through a NAT router.
-# uses a subprocess and regex to determine addresses to limit additional moreceiverdules needed
-
-
+# uses a subprocess and regex to determine addresses to limit additional modules needed
 
 def find_config():
     addr_pattern = re.compile("[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+")
@@ -25,9 +25,9 @@ def find_config():
         sys.exit(1)
     return config
 
+
 if __name__ == "__main__":
     if find_config() != constants.central_server:
         stream.stream()
     else:
         receive.receive()
-

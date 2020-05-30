@@ -4,14 +4,13 @@ import logging
 
 class StreamCamera:
     def __init__(self,
-                 resolution=str,
-                 destination=str,
-                 port=int,
-                 framerate=int):
-        self.resolution = resolution.split('x')
+                 config=dict,
+                 destination=str):
+        self.resolution = config['resolution']
+        self.bitrate = config['bitrate']
         self.destination = destination
-        self.port = port
-        self.framerate = framerate
+        self.port = config['port']
+        self.framerate = config['framerate']
 
     def record(self):
             self.execute = "raspivid -ae 14,0x00,0x00,20,20 -a 12" + \
@@ -19,7 +18,8 @@ class StreamCamera:
                        " -w " + str(self.resolution[0]) + \
                        " -h " + str(self.resolution[1]) + \
                        " -ih" + \
+                       " -b " + self.bitrate + \
                        " -sh 100" + \
-                       " -fps " + str(self.framerate) + \
+                       " --framerate " + str(self.framerate) + \
                        " -o udp://" + self.destination + ":" + str(self.port)
             subprocess.call(self.execute, shell=True)

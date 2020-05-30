@@ -9,10 +9,7 @@ def stream():
 
     # instantiate the stream camera
     config = find_config()
-    stream = StreamCamera.StreamCamera(resolution=config['resolution'],
-                                       destination=constants.central_server,
-                                       framerate=config['framerate'],
-                                       port=config['port'])
+    stream = StreamCamera.StreamCamera(config=config, destination=constnats.central_server)
     with open('/home/pi/log.txt','a+') as outfile:
         while True:
             # continuously records with a 2 second gap when interrupted.
