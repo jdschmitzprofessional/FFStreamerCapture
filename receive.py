@@ -1,4 +1,4 @@
-import StreamCamera
+import StreamCapture
 import constants
 import multiprocessing
 
@@ -12,7 +12,7 @@ def startRecoring(target):
 
 def receive():
     for camera in constants.cameras:
-        cameramap[camera] = StreamCamera.CaptureStream(listen=constants.central_server,
+        cameramap[camera] = StreamCapture.CaptureStream(listen=constants.central_server,
                                                        config=constants.cameras[camera])
     for camera in cameramap:
         multiprocessing.Process(target=startRecoring, args=(camera,)).start()

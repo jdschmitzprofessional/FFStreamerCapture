@@ -44,11 +44,8 @@ class CaptureStream:
                       " -hwaccel vaapi -hwaccel_output_format vaapi -hwaccel_device /dev/dri/by-path/pci-0000\:13\:00.0-render" + \
                       " -i udp://" + self.address + ":" + str(self.sourceport) + \
                       " -c:v h264_vaapi -b:v " + self.bitrate + \
-                      " -t 600 " + \
-                      " -framerate " + str(self.framerate) + " " + \
-                      self.savefolder + "/" + dt.now().strftime('%Y-%m-%d-%H-%M-%S') + ".mp4" + \
-                      " -c:v copy" + \
-                      " -flags global_header" + \
-                      " -f h264 udp://" + self.restream_address + ":" + str(self.restream_port)
+                      " -probesize 60M " + \
+                      " -t 3600 " + \
+                      self.savefolder + "/" + dt.now().strftime('%Y-%m-%d-%H-%M-%S') + ".mp4"
             print(execute)
             subprocess.call(execute, shell=True)
