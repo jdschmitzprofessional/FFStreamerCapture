@@ -3,6 +3,7 @@ import subprocess
 import re
 import stream
 import receive
+import sys
 
 
 # figure out which camera/server this is by .the IP address.
