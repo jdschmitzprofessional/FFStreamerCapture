@@ -18,10 +18,9 @@ def find_config():
     if constants.central_server in addresses:
         config = constants.central_server
         return config
-    if not config:
-        for camera in constants.cameras:
-            if constants.cameras[camera]['address'] in addresses:
-                config = constants.cameras[camera]
+    for camera in constants.cameras:
+        if constants.cameras[camera]['address'] in addresses:
+            config = constants.cameras[camera]
     if not config:
         sys.exit(1)
     return config
