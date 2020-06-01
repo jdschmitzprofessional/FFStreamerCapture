@@ -32,4 +32,4 @@ if __name__ == "__main__":
     if config == constants.central_server:
         receive.receive(constants.cameras)
     else:
-        stream.stream()
+        stream.stream(config)

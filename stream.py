@@ -5,10 +5,9 @@ import constants
 
 
 
-def stream():
+def stream(config):
 
     # instantiate the stream camera
-    config = find_config()
     stream = StreamCamera.StreamCamera(config=config, destination=constnats.central_server)
     with open('/home/pi/log.txt','a+') as outfile:
         while True:
