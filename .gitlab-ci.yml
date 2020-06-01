@@ -1,7 +1,2 @@
-stages:
-  - deploy
-
-  production:
-    stage: deploy
-    script:
-      - salt -L 'porchcam, eastgaragecam' cmd.run 'cd /home/pi/FFStreamerCapture; git reset --hard; git pull'
+script:
+  - salt -L 'porchcam, eastgaragecam' cmd.run 'cd /home/pi/FFStreamerCapture; git reset --hard; git pull'
