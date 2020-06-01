@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6caeb799-f030-4268-8c4f-a0ada73c9652" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590978560620</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="gitlabs config added">
+      <created>1590978744050</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1590978744050</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -319,12 +327,12 @@
       <screen x="0" y="0" width="1918" height="950" />
     </state>
     <state x="852" y="347" width="741" height="485" key="#Notifications/0.0.1918.950@0.0.1918.950" timestamp="1590944644735" />
-    <state x="156" y="34" width="761" height="878" key="CommitChangelistDialog2" timestamp="1590978560540">
+    <state x="156" y="34" width="761" height="878" key="CommitChangelistDialog2" timestamp="1590978743970">
       <screen x="0" y="0" width="1920" height="949" />
     </state>
     <state x="156" y="34" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1590720806168" />
     <state x="579" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.950@0.0.1918.950" timestamp="1590944857386" />
-    <state x="156" y="34" width="761" height="878" key="CommitChangelistDialog2/0.0.1920.949@0.0.1920.949" timestamp="1590978560540" />
+    <state x="156" y="34" width="761" height="878" key="CommitChangelistDialog2/0.0.1920.949@0.0.1920.949" timestamp="1590978743970" />
     <state x="190" y="79" key="DiffContextDialog" timestamp="1590944613279">
       <screen x="0" y="0" width="1918" height="950" />
     </state>
@@ -381,12 +389,12 @@
       <screen x="0" y="0" width="1918" height="950" />
     </state>
     <state width="1892" height="302" key="GridCell.Tab.1.right/0.0.1918.950@0.0.1918.950" timestamp="1590635939833" />
-    <state x="558" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1590978567394">
+    <state x="558" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1590978747517">
       <screen x="0" y="0" width="1920" height="949" />
     </state>
     <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1918.948@0.0.1918.948" timestamp="1590708900560" />
     <state x="557" y="210" key="Vcs.Push.Dialog.v2/0.0.1918.950@0.0.1918.950" timestamp="1590944867066" />
-    <state x="558" y="210" key="Vcs.Push.Dialog.v2/0.0.1920.949@0.0.1920.949" timestamp="1590978567394" />
+    <state x="558" y="210" key="Vcs.Push.Dialog.v2/0.0.1920.949@0.0.1920.949" timestamp="1590978747517" />
     <state x="617" y="155" width="676" height="636" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590707810179">
       <screen x="0" y="0" width="1918" height="948" />
     </state>

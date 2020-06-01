@@ -1,2 +1,6 @@
-script:
-  - salt -L 'porchcam, eastgaragecam' cmd.run 'cd /home/pi/FFStreamerCapture; git reset --hard; git pull'
+stages: deploy
+
+doit:
+  stage: deploy
+  script:
+    - salt -L 'porchcam, eastgaragecam' cmd.run 'cd /home/pi/FFStreamerCapture; git reset --hard; git pull'
