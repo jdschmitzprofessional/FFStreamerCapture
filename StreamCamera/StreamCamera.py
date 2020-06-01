@@ -6,7 +6,7 @@ class StreamCamera:
     def __init__(self,
                  config=dict,
                  destination=str):
-        self.resolution = config['resolution']
+        self.resolution = config['resolution'].lower().split("x")
         self.bitrate = config['bitrate']
         self.destination = destination
         self.port = config['port']
