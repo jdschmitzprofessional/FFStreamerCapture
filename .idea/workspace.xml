@@ -329,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590980999922</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="fixed a config parsing issue">
+      <created>1590981269752</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1590981269752</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -363,19 +370,20 @@
     <MESSAGE value="gitlabs config added" />
     <MESSAGE value="gitlabs config added, main.py" />
     <MESSAGE value="fixing main" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing main" />
+    <MESSAGE value="fixed a config parsing issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed a config parsing issue" />
   </component>
   <component name="WindowStateProjectService">
     <state x="852" y="347" width="741" height="485" key="#Notifications" timestamp="1590944644735">
       <screen x="0" y="0" width="1918" height="950" />
     </state>
     <state x="852" y="347" width="741" height="485" key="#Notifications/0.0.1918.950@0.0.1918.950" timestamp="1590944644735" />
-    <state x="156" y="34" width="761" height="878" key="CommitChangelistDialog2" timestamp="1590980999851">
+    <state x="156" y="34" width="761" height="878" key="CommitChangelistDialog2" timestamp="1590981269679">
       <screen x="0" y="0" width="1920" height="949" />
     </state>
     <state x="156" y="34" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1590720806168" />
     <state x="579" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.950@0.0.1918.950" timestamp="1590944857386" />
-    <state x="156" y="34" width="761" height="878" key="CommitChangelistDialog2/0.0.1920.949@0.0.1920.949" timestamp="1590980999851" />
+    <state x="156" y="34" width="761" height="878" key="CommitChangelistDialog2/0.0.1920.949@0.0.1920.949" timestamp="1590981269679" />
     <state x="190" y="79" key="DiffContextDialog" timestamp="1590944613279">
       <screen x="0" y="0" width="1918" height="950" />
     </state>
@@ -436,16 +444,17 @@
     </state>
     <state width="1892" height="302" key="GridCell.Tab.1.right/0.0.1918.950@0.0.1918.950" timestamp="1590635939833" />
     <state width="1897" height="302" key="GridCell.Tab.1.right/0.0.1920.949@0.0.1920.949" timestamp="1590980389838" />
-    <state x="558" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1590981004136">
+    <state x="558" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1590981274099">
       <screen x="0" y="0" width="1920" height="949" />
     </state>
     <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1918.948@0.0.1918.948" timestamp="1590708900560" />
     <state x="557" y="210" key="Vcs.Push.Dialog.v2/0.0.1918.950@0.0.1918.950" timestamp="1590944867066" />
-    <state x="558" y="210" key="Vcs.Push.Dialog.v2/0.0.1920.949@0.0.1920.949" timestamp="1590981004136" />
-    <state x="617" y="155" width="676" height="636" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590707810179">
-      <screen x="0" y="0" width="1918" height="948" />
+    <state x="558" y="210" key="Vcs.Push.Dialog.v2/0.0.1920.949@0.0.1920.949" timestamp="1590981274099" />
+    <state x="618" y="155" width="676" height="636" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590981386293">
+      <screen x="0" y="0" width="1920" height="949" />
     </state>
     <state x="617" y="155" width="676" height="636" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1918.948@0.0.1918.948" timestamp="1590707810179" />
+    <state x="618" y="155" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.949@0.0.1920.949" timestamp="1590981386293" />
     <state x="694" y="425" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1590944847708">
       <screen x="0" y="0" width="1918" height="950" />
     </state>

@@ -13,7 +13,7 @@ class StreamCamera:
         self.framerate = config['framerate']
 
     def record(self):
-            self.execute = "raspivid -ae 14,0x00,0x00,20,20 -a 12" + \
+            self.execute = "raspivid -ae 14 -a 1036" + \
                        " -t 0" + \
                        " -w " + str(self.resolution[0]) + \
                        " -h " + str(self.resolution[1]) + \
