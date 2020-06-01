@@ -5,8 +5,4 @@ stages:
 deploy:
   stage: deploy
   script:
-    - salt -L 'porchcam, eastgaragecam' cmd.run 'cd /home/pi/FFStreamerCapture; git reset --hard; git pull'
-validate:
-  stage: validate
-  script:
-    - salt -L 'porchcam, eastgaragecam' service.status camera'
+    - salt -L "porchcam, eastgaragecam" state.sls deploy

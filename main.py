@@ -18,16 +18,18 @@ def find_config():
     if constants.central_server in addresses:
         config = constants.central_server
         return config
-    for camera in constants.cameras:
-        if constants.cameras[camera]['address'] in addresses:
-            config = constants.cameras[camera]
+    if not config:
+        for camera in constants.cameras:
+            if constants.cameras[camera]['address'] in addresses:
+                config = constants.cameras[camera]
     if not config:
         sys.exit(1)
     return config
 
 
 if __name__ == "__main__":
-    if find_config() != constants.central_server:
-        stream.stream()
+    config = find_config()
+    if config == constants.central_server:
+        receive.receive(constants.cameras)
     else:
-        receive.receive()
+        stream.stream()
