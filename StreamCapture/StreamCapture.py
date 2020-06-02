@@ -45,7 +45,8 @@ class CaptureStream:
                       " -i udp://" + self.address + ":" + str(self.sourceport) + \
                       " -c:v h264_vaapi -b:v " + self.bitrate + \
                       " -probesize 60M " + \
-                      " -t 3600 " + \
-                      self.savefolder + "/" + dt.now().strftime('%Y-%m-%d-%H-%M-%S') + ".mp4"
+                      " -t 600 " + \
+                      self.savefolder + "/" + dt.now().strftime('%Y-%m-%d-%H-%M-%S') + ".mp4" + \
+                      " -c:v copy -f h264 udp://" + self.restream_address + ":" + str(self.restream_port)
             print(execute)
             subprocess.call(execute, shell=True)
