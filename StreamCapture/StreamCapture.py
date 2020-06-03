@@ -9,8 +9,6 @@ class CaptureStream:
         self.address = listen
         ### port to listen on
         self.sourceport = config['port']
-        ### folder to save files to
-        self.savefolder = config['savefolder']
         ### set the transfer bitrate
         self.bitrate = config['bitrate']
         ### set the framerate to force synchronicity
@@ -39,13 +37,15 @@ class CaptureStream:
             ### -c:v copy... options from here are for the re-stream. Specifies to do nothing and just rebroadcast.
             ### -flags global... specifies to include headers on all packets in case something starts in the middle.
             ### -f h264 udp... format to rebroadcast and where to rebroadcast it to.
-
+            startTime = dt.now().strftime('%Y-%m-%d-%H-%M-%S')
             execute = "ffmpeg" + \
-                      " -hwaccel vaapi -hwaccel_output_format vaapi -hwaccel_device /dev/dri/by-path/pci-0000\:13\:00.0-render" + \
-                      " -i udp://" + self.address + ":" + str(self.sourceport) + \
-                      " -c:v h264_vaapi -b:v " + self.bitrate + \
+                      " -i \"udp://" + self.address + ":" + str(self.sourceport) + "?overrun_nonfatal=1&fifo_size=50000000\"" + \
+                      " -c:v copy" + \
                       " -t 600 " + \
-                      self.savefolder + "/" + dt.now().strftime('%Y-%m-%d-%H-%M-%S') + ".mp4" + \
-                      " -c:v copy -f h264 udp://" + self.restream_address + ":" + str(self.restream_port)
+                      " /tmp/" + self.name + "/" + startTime + ".h264"
             print(execute)
             subprocess.call(execute, shell=True)
+            reprocess = "mv -v /tmp/" + self.name + "/" + startTime + ".h264 /tmp/" + self.name + "/" + startTime + ".h264.finished"
+            subprocess.call(reprocess, shell=True)
+
+
