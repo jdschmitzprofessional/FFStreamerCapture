@@ -27,7 +27,7 @@ class StreamProcess:
                               " -hwaccel_device /dev/dri/by-path/pci-0000\:13\:00.0-render" + \
                               " -i " + self.filepath + "/" + footage + \
                               " -b:v 1500K" + \
-                              " -c:v h264_vaapi " + self.saveFolder + "/" + footage.replace(".h264.finished", ".mp4")
+                              " -c:v hevc_vaapi " + self.saveFolder + "/" + footage.replace(".h264.finished", ".mp4")
                     try:
                        subprocess.check_output(execute, shell=True)
                     except subprocess.CalledProcessError:
@@ -35,4 +35,4 @@ class StreamProcess:
                     os.remove(self.filepath + "/" + footage)
                 else:
                     continue
-            time.sleep(10)
+            time.sleep(60)

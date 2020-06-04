@@ -42,7 +42,10 @@ class CaptureStream:
                       " -i \"tcp://" + self.address + ":" + str(self.sourceport) + "?listen\"" + \
                       " -c:v copy" + \
                       " -t 600 " + \
-                      " /tmp/" + self.name + "/" + startTime + ".h264"
+                      " /tmp/" + self.name + "/" + startTime + ".h264" + \
+                      " -c:v copy" + \
+                      " -t 600 " + \
+                      " -f h264 udp://" + self.restream_address + ":" + str(self.restream_port)
             print(execute)
             subprocess.call(execute, shell=True)
             reprocess = "mv -v /tmp/" + self.name + "/" + startTime + ".h264 /tmp/" + self.name + "/" + startTime + ".h264.finished"
