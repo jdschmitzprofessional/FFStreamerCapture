@@ -1,5 +1,6 @@
 import subprocess
 import logging
+import time
 
 
 class StreamCamera:
@@ -23,4 +24,4 @@ class StreamCamera:
             try:
                 subprocess.check_call(self.execute, shell=True)
             except subprocess.CalledProcessError:
-                time.sleep(10)
+                time.sleep(3)
