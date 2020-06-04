@@ -23,7 +23,8 @@ class StreamProcess:
             for footage in os.listdir(self.filepath):
                 if "finished" in footage:
                     execute = "ffmpeg" + \
-                              " -hwaccel vaapi -hwaccel_output_format vaapi -hwaccel_device /dev/dri/by-path/pci-0000\:13\:00.0-render" + \
+                              " -hwaccel vaapi -hwaccel_output_format vaapi" + \
+                              " -hwaccel_device /dev/dri/by-path/pci-0000\:13\:00.0-render" + \
                               " -i " + self.filepath + "/" + footage + \
                               " -b:v 1500K" + \
                               " -c:v h264_vaapi " + self.saveFolder + "/" + footage.replace(".h264.finished", ".mp4")

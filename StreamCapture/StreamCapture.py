@@ -39,7 +39,7 @@ class CaptureStream:
             ### -f h264 udp... format to rebroadcast and where to rebroadcast it to.
             startTime = dt.now().strftime('%Y-%m-%d-%H-%M-%S')
             execute = "ffmpeg" + \
-                      " -i \"udp://" + self.address + ":" + str(self.sourceport) + "?overrun_nonfatal=1&fifo_size=50000000\"" + \
+                      " -i \"tcp://" + self.address + ":" + str(self.sourceport) + "?listen\"" + \
                       " -c:v copy" + \
                       " -t 600 " + \
                       " /tmp/" + self.name + "/" + startTime + ".h264"
