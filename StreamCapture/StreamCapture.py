@@ -1,5 +1,6 @@
 import subprocess
 from datetime import datetime as dt
+import logging
 
 class CaptureStream:
     def __init__(self, listen=str, config=dict):
@@ -16,6 +17,9 @@ class CaptureStream:
         ### empty string initialization, populates in capture method
         self.execute = str
         ### port to restream on. Calculates arbitrarily if not provided.
+        self.logger = logging.getLogger("FFStreamerCapture." + self.name + ".capture")
+        self.logger.setLevel(logging.DEBUG)
+        self.logger.info("\"Instantiated Stream Capture\"")
         try:
             self.restream_port = config['restream_port']
         except KeyError:
@@ -28,27 +32,19 @@ class CaptureStream:
 
     def capture(self):
         while True:
-            ### Construct ffmpeg command
-            ### hwaccel vaapi... uses vaapi hardware decoding, maps to the pci id for an RX570.
-            ### -i udp...   where the stream for this instance is coming from
-            ### -c:v h264_vaapi... specifies to use vaapi for re-encoding as well at a bitrate of 1.5Mb/s.
-            ### -framerate ... specifies frame to force synchronicity with the remote camera.
-            ### self.savefolder... specifies a dynamically named output file.
-            ### -c:v copy... options from here are for the re-stream. Specifies to do nothing and just rebroadcast.
-            ### -flags global... specifies to include headers on all packets in case something starts in the middle.
-            ### -f h264 udp... format to rebroadcast and where to rebroadcast it to.
             startTime = dt.now().strftime('%Y-%m-%d-%H-%M-%S')
             execute = "ffmpeg" + \
                       " -i \"tcp://" + self.address + ":" + str(self.sourceport) + "?listen\"" + \
                       " -c:v copy" + \
-                      " -t 600 " + \
+                      " -t 300 " + \
                       " /tmp/" + self.name + "/" + startTime + ".h264" + \
                       " -c:v copy" + \
-                      " -t 600 " + \
+                      " -t 290 " + \
                       " -f h264 udp://" + self.restream_address + ":" + str(self.restream_port)
             print(execute)
             subprocess.call(execute, shell=True)
             reprocess = "mv -v /tmp/" + self.name + "/" + startTime + ".h264 /tmp/" + self.name + "/" + startTime + ".h264.finished"
             subprocess.call(reprocess, shell=True)
+
 
 

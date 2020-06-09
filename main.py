@@ -4,6 +4,8 @@ import re
 import stream
 import receive
 import sys
+import logging
+import socket
 
 
 # figure out which camera/server this is by .the IP address.
@@ -27,8 +29,14 @@ def find_config():
 
 
 if __name__ == "__main__":
+    fileformat = '{"time": "%(asctime)s", "source": "%(name)s", "level": "%(levelname)s", "details": %(message)s}'
+    logging.basicConfig(format=fileformat, filename=constants.log_path + "/main.log")
+    logger = logging.getLogger("FFStreamerCapture")
+    logger.setLevel(logging.DEBUG)
+    logger.info("Initiated FFStreamerCapture")
     config = find_config()
     if config == constants.central_server:
+        logger.info("")
         receive.receive(constants.cameras)
     else:
         stream.stream(config)
