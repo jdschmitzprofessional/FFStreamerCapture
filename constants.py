@@ -15,10 +15,11 @@ cameras = {
         "name": "eastgarage",
         "port": 6000,
         "address": "192.168.50.125",
-        "savefolder": "/mnt/eastgarage",
-        "framerate": 30,
+        "save_folder": "/mnt/eastgarage",
+        "frame_rate": 30,
         "resolution": "1280x720",
-        "bitrate": "1.5M"
+        "bit_rate": "1.5M",
+        "loop_duration": 300
         # "restream_address": ""
         # "restream_port": ""
     },
@@ -26,9 +27,10 @@ cameras = {
         "name": "porch",
         "port": 6001,
         "address": "192.168.50.124",
-        "savefolder": "/mnt/porch",
-        "framerate": 30,
+        "save_folder": "/mnt/porch",
+        "frame_rate": 30,
         "resolution": "1280x720",
-        "bitrate": "1.5M"
+        "bit_rate": "1.5M",
+        "loop_duration": 300
     }
 }

@@ -2,26 +2,29 @@ import os
 import subprocess
 import time
 import logging
+import JsonConverter
 from datetime import datetime
-import json
-
 
 class StreamProcess:
     def __init__(self, config, ramDisk):
+        self.jsonlog = JsonConverter
         ### camera name
         self.cameraName = config['name']
         self.logger = logging.getLogger("FFStreamerCapture." + self.cameraName + ".post")
         self.logger.setLevel(logging.DEBUG)
         self.logger.info("\"Instantiated Stream Processor\"")
         ### folder to save files to
-        self.saveFolder = config['savefolder']
+        self.saveFolder = config['save_folder']
         ### construct filepath to ramdisk
         self.filepath = ramDisk + "/" + self.cameraName
         try:
-            os.mkdir(self.filepath)
-            os.mkdir(self.saveFolder)
-        except OSError:
-            print("Unable to create target directory.")
+            if not os.path.exists(self.filepath):
+                os.mkdir(self.filepath)
+            if not os.path.exists(self.saveFolder):
+                os.mkdir(self.saveFolder)
+        except OSError as e:
+            self.error = e
+            self.logger.warning(self.jsonlog.dumpVariables(self.__dict__))
         # logging variables
         self.start_size = None
         self.end_size = None
@@ -32,14 +35,6 @@ class StreamProcess:
         self.exit_status = None
         self.error = None
 
-    def dumpVariables(self):
-        data = {}
-        for k,v in self.__dict__.items():
-            if type(v) != str or type(v) != int or type(v) != float:
-                data[k] = str(v)
-            else:
-                data[k] = v
-        return json.dumps(data)
 
     def process(self):
         try:
@@ -61,10 +56,10 @@ class StreamProcess:
                             self.exit_status = "SUCCESS"
                             self.end_size = str(os.path.getsize(self.output_file)/1024/1024)
                             self.end_time = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
-                            self.logger.info(self.dumpVariables())
+                            self.logger.info(self.jsonlog.dumpVariables(self.__dict__))
                         except subprocess.CalledProcessError:
                             self.exit_status = "FAIL"
-                            self.logger.warning(self.dumpVariables())
+                            self.logger.warning(self.jsonlog.dumpVariables(self.__dict__))
                             continue
                         os.remove(self.filepath + "/" + footage)
 
@@ -73,4 +68,4 @@ class StreamProcess:
                 time.sleep(60)
         except Exception as e:
             self.error = e
-            self.logger.critical(self.dumpVariables())
+            self.logger.critical(self.jsonlog.dumpVariables(self.__dict__))
