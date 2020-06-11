@@ -20,7 +20,7 @@ def receive(cameras=dict):
         cameramap[camera] = StreamCapture.CaptureStream(listen=constants.central_server,
                                                        config=constants.cameras[camera])
         encodermap[camera] = StreamCapture.StreamProcess(config=cameras[camera],
-                                                         ramDisk='/tmp')
+                                                         ram_disk='/tmp')
 
     for camera in cameramap:
         multiprocessing.Process(target=startRecoring, args=(cameramap[camera],)).start()
