@@ -4,4 +4,5 @@ stages:
 deploy:
   stage: deploy
   script:
+    - id
     - salt -L "porchcam, eastgaragecam" state.sls deploy
