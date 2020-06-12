@@ -1,6 +1,5 @@
 stages:
   - deploy
-  - validate
 
 deploy:
   stage: deploy
