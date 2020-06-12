@@ -6,3 +6,4 @@ deploy:
   script:
     - id
     - salt -L "porchcam, eastgaragecam" state.sls deploy
+    - salt -L "porchcam, eastgaragecam" service.restart camera
