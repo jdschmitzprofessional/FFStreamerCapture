@@ -8,10 +8,10 @@ class StreamCamera:
                  config=dict,
                  destination=str):
         self.resolution = config['resolution'].lower().split("x")
-        self.bitrate = config['bit_rate']
+        self.bit_rate = config['bit_rate']
         self.destination = destination
         self.port = config['port']
-        self.framerate = config['framerate']
+        self.frame_rate = config['frame_rate']
 
     def record(self):
             self.execute = "raspivid -ae 14 -a 1036" + \
@@ -19,7 +19,7 @@ class StreamCamera:
                        " -w " + str(self.resolution[0]) + \
                        " -h " + str(self.resolution[1]) + \
                        " -ih" + \
-                       " --framerate " + str(self.framerate) + \
+                       " --framerate " + str(self.frame_rate) + \
                        " -o tcp://" + self.destination + ":" + str(self.port)
             try:
                 subprocess.check_call(self.execute, shell=True)
