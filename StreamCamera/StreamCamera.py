@@ -8,7 +8,7 @@ class StreamCamera:
                  config=dict,
                  destination=str):
         self.resolution = config['resolution'].lower().split("x")
-        self.bitrate = config['bitrate']
+        self.bitrate = config['bit_rate']
         self.destination = destination
         self.port = config['port']
         self.framerate = config['framerate']
