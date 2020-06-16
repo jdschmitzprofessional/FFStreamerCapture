@@ -16,7 +16,7 @@ cameras = {
         "port": 6000,
         "address": "192.168.50.125",
         "save_folder": "/mnt/eastgarage",
-        "frame_rate": 30,
+        "frame_rate": 20,
         "resolution": "1600x900",
         "bit_rate": "5M",
         "loop_duration": 300
@@ -28,7 +28,7 @@ cameras = {
         "port": 6001,
         "address": "192.168.50.124",
         "save_folder": "/mnt/porch",
-        "frame_rate": 30,
+        "frame_rate": 20,
         "resolution": "1600x900",
         "bit_rate": "5M",
         "loop_duration": 300

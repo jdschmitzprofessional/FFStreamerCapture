@@ -10,6 +10,7 @@ class StreamProcess:
     def __init__(self, config=dict, ram_disk=str):
         self.convert = JsonConverter
         self.cameraName = config['name']
+        self.bit_rate = config['bit_rate']
         self.logger = logging.getLogger("FFStreamerCapture." + self.cameraName + ".post")
         self.logger.setLevel(logging.DEBUG)
         self.logger.info("\"Instantiated Stream Processor\"")
@@ -54,7 +55,7 @@ class StreamProcess:
                                   " -hwaccel vaapi -hwaccel_output_format vaapi" + \
                                   " -hwaccel_device /dev/dri/by-path/pci-0000\:13\:00.0-render" + \
                                   " -i " + self.source_file + \
-                                  " -b:v 1500K" + \
+                                  " -b:v " + self.bit_rate + \
                                   " -c:v h264_vaapi " + self.output_file
                         try:
                             subprocess.check_output(execute, shell=True)
