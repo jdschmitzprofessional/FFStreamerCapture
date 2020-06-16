@@ -42,8 +42,8 @@ class StreamProcess:
             while True:
                 self.error = None
                 if self.current_date != datetime.now().strftime('%Y-%m-%d'):
-                    self.sort_output_by_date()
                     self.current_date = datetime.now().strftime('%Y-%m-%d')
+                    self.sort_output_by_date()
                 for footage in os.listdir(self.filepath):
                     self.source_file = self.filepath + "/" + footage
                     if "finished" in footage:
@@ -66,6 +66,8 @@ class StreamProcess:
                         except subprocess.CalledProcessError:
                             self.exit_status = "FAIL"
                             self.logger.warning(self.convert.dump_variables(self.__dict__))
+                            os.remove(self.source_file)
+                            self.logger.warning("\"Removed " + self.source_file + "\"")
                             continue
                         os.remove(self.filepath + "/" + footage)
 

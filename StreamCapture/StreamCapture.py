@@ -33,12 +33,14 @@ class CaptureStream:
         except KeyError:
             self.restream_address = self.listen_address
         # logging initialization
+        self.buffer = '/tmp/' + self.camera_name
         self.start_time = str
         self.end_time = str
         self.file_size = str
         self.error = None
 
     def capture(self):
+        self.clean_ram_disk()
         while True:
             self.error = None
             try:
@@ -47,7 +49,7 @@ class CaptureStream:
                           " -i \"tcp://" + self.listen_address + ":" + str(self.listen_port) + "?listen\"" + \
                           " -c:v copy" + \
                           " -t " + str(self.loop_duration) + \
-                          " /tmp/" + self.camera_name + "/" + self.start_time + ".h264" + \
+                          " " + self.buffer + "/" + self.start_time + ".h264" + \
                           " -c:v copy" + \
                           " -t " + str(self.loop_duration) + \
                           " -f h264 udp://" + self.restream_address + ":" + str(self.restream_port)
@@ -60,5 +62,11 @@ class CaptureStream:
             except Exception as e:
                 self.error = e
                 self.logger.critical(self.converter.dump_variables(self.__dict__))
+
+    def clean_ram_disk(self):
+        for file in os.listdir(self.buffer):
+            if "finished" not in file:
+                os.remove(self.buffer + '/' + file)
+                self.logger.info("\"Removed " + file + "\"")
 
 
