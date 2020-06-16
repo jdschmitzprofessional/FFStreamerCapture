@@ -27,4 +27,3 @@ def receive(cameras=dict):
     for encoder in encodermap:
         multiprocessing.Process(target=processFootage, args=(encodermap[encoder],)).start()
 
-
