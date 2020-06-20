@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6caeb799-f030-4268-8c4f-a0ada73c9652" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StreamCapture/StreamProcess.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamCapture/StreamProcess.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -443,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592313753123</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Tweaking framerate, one camera struggling with 1600x900 resolution">
+      <created>1592314790344</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1592314790344</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -460,7 +466,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="testing on a raspberry pi zero" />
     <MESSAGE value="Got poc working, saving to prep for multiprocessing" />
     <MESSAGE value="issue with multiple streams going to the same interface, all but one will always fail." />
     <MESSAGE value="Resolved previous issue with multiple streams to a single interface, switched from using ffmpeg on the remote cameras to vanilla raspivid which doesn't tax the system.&#10;Remote cameras now insert the timestamp as when the server does it the timestamp doesn't jump ahead when the stream gets interrupted (eg 20 seconds pass with no new video feed and the timer does not advance)." />
@@ -485,7 +490,8 @@
     <MESSAGE value="Updated gitlab-ci.yml to restart application" />
     <MESSAGE value="updated resolution to 1600x900" />
     <MESSAGE value="updated bitrate to compensate for higher resolution and increased bandwidth from repeater" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated bitrate to compensate for higher resolution and increased bandwidth from repeater" />
+    <MESSAGE value="Tweaking framerate, one camera struggling with 1600x900 resolution" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tweaking framerate, one camera struggling with 1600x900 resolution" />
   </component>
   <component name="WindowStateProjectService">
     <state x="593" y="157" key="#Inspections" timestamp="1591749992426">
@@ -496,49 +502,49 @@
       <screen x="0" y="0" width="1918" height="950" />
     </state>
     <state x="852" y="347" width="741" height="485" key="#Notifications/0.0.1918.950@0.0.1918.950" timestamp="1590944644735" />
-    <state x="579" y="34" width="761" height="878" key="CommitChangelistDialog2" timestamp="1592313753031">
+    <state x="579" y="34" width="761" height="878" key="CommitChangelistDialog2" timestamp="1592314790264">
       <screen x="0" y="0" width="1918" height="950" />
     </state>
     <state x="156" y="34" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1592275816931" />
-    <state x="579" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.950@0.0.1918.950" timestamp="1592313753031" />
+    <state x="579" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.950@0.0.1918.950" timestamp="1592314790264" />
     <state x="156" y="34" width="761" height="878" key="CommitChangelistDialog2/0.0.1920.949@0.0.1920.949" timestamp="1590981401738" />
     <state x="580" y="34" key="CommitChangelistDialog2/0.0.1920.951@0.0.1920.951" timestamp="1591109101602" />
     <state x="190" y="79" key="DiffContextDialog" timestamp="1590944613279">
       <screen x="0" y="0" width="1918" height="950" />
     </state>
     <state x="190" y="79" key="DiffContextDialog/0.0.1918.950@0.0.1918.950" timestamp="1590944613279" />
-    <state width="1895" height="292" key="GridCell.Tab.0.bottom" timestamp="1592314513371">
+    <state width="1895" height="292" key="GridCell.Tab.0.bottom" timestamp="1592325321231">
       <screen x="0" y="0" width="1918" height="950" />
     </state>
     <state width="1895" height="211" key="GridCell.Tab.0.bottom/0.0.1918.948@0.0.1918.948" timestamp="1591641819681" />
-    <state width="1895" height="292" key="GridCell.Tab.0.bottom/0.0.1918.950@0.0.1918.950" timestamp="1592314513371" />
+    <state width="1895" height="292" key="GridCell.Tab.0.bottom/0.0.1918.950@0.0.1918.950" timestamp="1592325321231" />
     <state width="1896" height="242" key="GridCell.Tab.0.bottom/0.0.1919.949@0.0.1919.949" timestamp="1590695681059" />
     <state width="1897" height="292" key="GridCell.Tab.0.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1591883904953" />
     <state width="1897" height="212" key="GridCell.Tab.0.bottom/0.0.1920.949@0.0.1920.949" timestamp="1591154798445" />
     <state width="1897" height="211" key="GridCell.Tab.0.bottom/0.0.1920.951@0.0.1920.951" timestamp="1591642941160" />
-    <state width="1895" height="292" key="GridCell.Tab.0.center" timestamp="1592314513370">
+    <state width="1895" height="292" key="GridCell.Tab.0.center" timestamp="1592325321230">
       <screen x="0" y="0" width="1918" height="950" />
     </state>
     <state width="1895" height="211" key="GridCell.Tab.0.center/0.0.1918.948@0.0.1918.948" timestamp="1591641819680" />
-    <state width="1895" height="292" key="GridCell.Tab.0.center/0.0.1918.950@0.0.1918.950" timestamp="1592314513370" />
+    <state width="1895" height="292" key="GridCell.Tab.0.center/0.0.1918.950@0.0.1918.950" timestamp="1592325321230" />
     <state width="1896" height="242" key="GridCell.Tab.0.center/0.0.1919.949@0.0.1919.949" timestamp="1590695681056" />
     <state width="1897" height="292" key="GridCell.Tab.0.center/0.0.1920.1044@0.0.1920.1044" timestamp="1591883904953" />
     <state width="1897" height="212" key="GridCell.Tab.0.center/0.0.1920.949@0.0.1920.949" timestamp="1591154798444" />
     <state width="1897" height="211" key="GridCell.Tab.0.center/0.0.1920.951@0.0.1920.951" timestamp="1591642941156" />
-    <state width="1895" height="292" key="GridCell.Tab.0.left" timestamp="1592314513370">
+    <state width="1895" height="292" key="GridCell.Tab.0.left" timestamp="1592325321229">
       <screen x="0" y="0" width="1918" height="950" />
     </state>
     <state width="1895" height="211" key="GridCell.Tab.0.left/0.0.1918.948@0.0.1918.948" timestamp="1591641819679" />
-    <state width="1895" height="292" key="GridCell.Tab.0.left/0.0.1918.950@0.0.1918.950" timestamp="1592314513370" />
+    <state width="1895" height="292" key="GridCell.Tab.0.left/0.0.1918.950@0.0.1918.950" timestamp="1592325321229" />
     <state width="1896" height="242" key="GridCell.Tab.0.left/0.0.1919.949@0.0.1919.949" timestamp="1590695681056" />
     <state width="1897" height="292" key="GridCell.Tab.0.left/0.0.1920.1044@0.0.1920.1044" timestamp="1591883904952" />
     <state width="1897" height="212" key="GridCell.Tab.0.left/0.0.1920.949@0.0.1920.949" timestamp="1591154798444" />
     <state width="1897" height="211" key="GridCell.Tab.0.left/0.0.1920.951@0.0.1920.951" timestamp="1591642941156" />
-    <state width="1895" height="292" key="GridCell.Tab.0.right" timestamp="1592314513371">
+    <state width="1895" height="292" key="GridCell.Tab.0.right" timestamp="1592325321230">
       <screen x="0" y="0" width="1918" height="950" />
     </state>
     <state width="1895" height="211" key="GridCell.Tab.0.right/0.0.1918.948@0.0.1918.948" timestamp="1591641819680" />
-    <state width="1895" height="292" key="GridCell.Tab.0.right/0.0.1918.950@0.0.1918.950" timestamp="1592314513371" />
+    <state width="1895" height="292" key="GridCell.Tab.0.right/0.0.1918.950@0.0.1918.950" timestamp="1592325321230" />
     <state width="1896" height="242" key="GridCell.Tab.0.right/0.0.1919.949@0.0.1919.949" timestamp="1590695681058" />
     <state width="1897" height="292" key="GridCell.Tab.0.right/0.0.1920.1044@0.0.1920.1044" timestamp="1591883904953" />
     <state width="1897" height="212" key="GridCell.Tab.0.right/0.0.1920.949@0.0.1920.949" timestamp="1591154798445" />
@@ -567,11 +573,11 @@
     <state width="1892" height="302" key="GridCell.Tab.1.right/0.0.1918.950@0.0.1918.950" timestamp="1590635939833" />
     <state width="1897" height="302" key="GridCell.Tab.1.right/0.0.1920.949@0.0.1920.949" timestamp="1590981665036" />
     <state width="1897" height="302" key="GridCell.Tab.1.right/0.0.1920.951@0.0.1920.951" timestamp="1591108895400" />
-    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1592313754805">
+    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1592314795559">
       <screen x="0" y="0" width="1918" height="950" />
     </state>
     <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1918.948@0.0.1918.948" timestamp="1592275818860" />
-    <state x="557" y="210" key="Vcs.Push.Dialog.v2/0.0.1918.950@0.0.1918.950" timestamp="1592313754805" />
+    <state x="557" y="210" key="Vcs.Push.Dialog.v2/0.0.1918.950@0.0.1918.950" timestamp="1592314795559" />
     <state x="558" y="210" key="Vcs.Push.Dialog.v2/0.0.1920.949@0.0.1920.949" timestamp="1590981410412" />
     <state x="558" y="210" key="Vcs.Push.Dialog.v2/0.0.1920.951@0.0.1920.951" timestamp="1591109106789" />
     <state x="617" y="155" width="676" height="636" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1591581522442">
