@@ -1,9 +1,10 @@
+
 stages:
   - deploy
 
 deploy:
   stage: deploy
   script:
-    - id
+    - pyinstaller main.py
     - salt -L "porchcam, eastgaragecam" state.sls deploy
     - salt -L "porchcam, eastgaragecam" service.restart camera
