@@ -12,3 +12,4 @@ deploy:
     - ls -l dist
     - mv dist/main /srv/salt/deploy/main
     - salt -L "porchcam, eastgaragecam" state.sls deploy
+    - salt -L "porchcam, eastgaragecam" service.restart camera
