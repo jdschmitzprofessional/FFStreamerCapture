@@ -7,6 +7,7 @@ deploy:
   stage: deploy
   script:
     - pip3 install -r requirements.txt
-    - pyinstaller main.py
+    - ls -ltr
+    - pyinstaller -F main.py
     - salt -L "porchcam, eastgaragecam" state.sls deploy
     - salt -L "porchcam, eastgaragecam" service.restart camera
