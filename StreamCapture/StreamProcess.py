@@ -53,9 +53,8 @@ class StreamProcess:
                         self.output_file = self.save_folder + "/" + footage.replace(".h264.finished", ".mp4")
                         execute = "ffmpeg" + \
                                   " -hwaccel vaapi -hwaccel_output_format vaapi" + \
-                                  " -hwaccel_device /dev/dri/by-path/pci-0000\:13\:00.0-render" + \
+                                  " -hwaccel_device /dev/dri/by-path/pci-0000\:0b\:00.0-render" + \
                                   " -i " + self.source_file + \
-                                  " -b:v " + self.bit_rate + \
                                   " -c:v h264_vaapi " + self.output_file
                         try:
                             subprocess.check_output(execute, shell=True)

@@ -5,6 +5,7 @@ import stream
 import receive
 import sys
 import logging
+from logging.handlers import TimedRotatingFileHandler
 import socket
 
 
@@ -30,10 +31,12 @@ def find_config():
 
 if __name__ == "__main__":
     fileformat = '{"time": "%(asctime)s", "source": "%(name)s", "level": "%(levelname)s", "details": %(message)s}'
-    logging.basicConfig(format=fileformat, filename=constants.log_path + "/main.log")
+    handler = TimedRotatingFileHandler(constants.log_path + "/camera.log", when="midnight", interval=1, backupCount=5)
+    logging.basicConfig(format=fileformat, filename=constants.log_path + "/camera.log")
     logger = logging.getLogger("FFStreamerCapture")
     logger.setLevel(logging.DEBUG)
     logger.info("Initiated FFStreamerCapture")
+    logger.addHandler(handler)
     config = find_config()
     if config == constants.central_server:
         logger.info("")
