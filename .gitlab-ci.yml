@@ -1,13 +1,12 @@
-image: "python:3.8"
 before_script:
-  - pip install pyinstaller
+  - pip3 install pyinstaller
 stages:
   - deploy
 
 deploy:
   stage: deploy
   script:
-    - pip install -r requirements.txt
+    - pip3 install -r requirements.txt
     - pyinstaller main.py
     - salt -L "porchcam, eastgaragecam" state.sls deploy
     - salt -L "porchcam, eastgaragecam" service.restart camera
