@@ -2,82 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6caeb799-f030-4268-8c4f-a0ada73c9652" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/build/main/Analysis-00.toc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/main/COLLECT-00.toc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/main/EXE-00.toc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/main/PKG-00.pkg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/main/PKG-00.toc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/main/PYZ-00.pyz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/main/PYZ-00.toc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/main/base_library.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/main/main" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/main/warn-main.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/main/xref-main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_asyncio.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_bisect.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_blake2.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_bz2.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_codecs_cn.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_codecs_hk.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_codecs_iso2022.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_codecs_jp.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_codecs_kr.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_codecs_tw.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_contextvars.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_csv.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_ctypes.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_datetime.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_decimal.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_hashlib.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_heapq.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_json.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_lzma.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_md5.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_multibytecodec.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_multiprocessing.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_opcode.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_pickle.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_posixshmem.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_posixsubprocess.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_queue.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_random.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_sha1.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_sha256.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_sha3.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_sha512.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_socket.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_ssl.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/_struct.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/array.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/base_library.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/binascii.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/grp.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/include/python3.8/pyconfig.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/ld-linux-x86-64.so.2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/lib/python3.8/config-3.8-x86_64-linux-gnu/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/libbz2.so.1.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/libcrypto.so.1.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/libexpat.so.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/libffi.so.7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/liblzma.so.5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/libncursesw.so.6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/libpython3.8.so.1.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/libreadline.so.8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/libssl.so.1.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/libz.so.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/main" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/math.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/mmap.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/pyexpat.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/readline.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/resource.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/select.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/termios.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/unicodedata.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main/zlib.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.spec" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,13 +104,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1590246291101</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Initializing repository">
-      <created>1590266433701</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1590266433701</updated>
     </task>
     <task id="LOCAL-00004" summary="testing on a raspberry pi zero">
       <created>1590266990344</created>
@@ -523,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592755147303</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="testing pyinstaller compilation in gitlab">
+      <created>1592759121484</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1592759121484</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -540,7 +465,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Resolved previous issue with multiple streams to a single interface, switched from using ffmpeg on the remote cameras to vanilla raspivid which doesn't tax the system.&#10;Remote cameras now insert the timestamp as when the server does it the timestamp doesn't jump ahead when the stream gets interrupted (eg 20 seconds pass with no new video feed and the timer does not advance)." />
     <MESSAGE value="Working on long-term testing. Attempting to track why frames drop when they do. Implementing logging." />
     <MESSAGE value="Adjusted receiver codec to copy to avoid unnecessary CPU util, adjusted timestamps on cameras to print with a black box for visibility." />
     <MESSAGE value="Adjusting bitrate on hardware encoding to optimize quality/file size" />
@@ -565,7 +489,8 @@
     <MESSAGE value="Tweaking framerate, one camera struggling with 1600x900 resolution" />
     <MESSAGE value="Reducing bitrate, excessive file size" />
     <MESSAGE value="changed path to video card after hardware changes, removed bitrate from hardware encoding command as it was matching that of the cameras, actually causing an increased filesize." />
-    <option name="LAST_COMMIT_MESSAGE" value="changed path to video card after hardware changes, removed bitrate from hardware encoding command as it was matching that of the cameras, actually causing an increased filesize." />
+    <MESSAGE value="testing pyinstaller compilation in gitlab" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing pyinstaller compilation in gitlab" />
   </component>
   <component name="WindowStateProjectService">
     <state x="593" y="157" key="#Inspections" timestamp="1591749992426">
@@ -576,11 +501,11 @@
       <screen x="0" y="0" width="1918" height="950" />
     </state>
     <state x="852" y="347" width="741" height="485" key="#Notifications/0.0.1918.950@0.0.1918.950" timestamp="1590944644735" />
-    <state x="579" y="34" width="761" height="878" key="CommitChangelistDialog2" timestamp="1592755147154">
+    <state x="579" y="34" width="761" height="878" key="CommitChangelistDialog2" timestamp="1592759121379">
       <screen x="0" y="0" width="1918" height="950" />
     </state>
     <state x="156" y="34" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1592275816931" />
-    <state x="579" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.950@0.0.1918.950" timestamp="1592755147154" />
+    <state x="579" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.950@0.0.1918.950" timestamp="1592759121379" />
     <state x="156" y="34" width="761" height="878" key="CommitChangelistDialog2/0.0.1920.949@0.0.1920.949" timestamp="1590981401738" />
     <state x="580" y="34" key="CommitChangelistDialog2/0.0.1920.951@0.0.1920.951" timestamp="1591109101602" />
     <state x="190" y="79" key="DiffContextDialog" timestamp="1590944613279">
@@ -647,11 +572,11 @@
     <state width="1895" height="301" key="GridCell.Tab.1.right/0.0.1918.950@0.0.1918.950" timestamp="1592754925580" />
     <state width="1897" height="302" key="GridCell.Tab.1.right/0.0.1920.949@0.0.1920.949" timestamp="1590981665036" />
     <state width="1897" height="302" key="GridCell.Tab.1.right/0.0.1920.951@0.0.1920.951" timestamp="1591108895400" />
-    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1592755149069">
+    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1592759122813">
       <screen x="0" y="0" width="1918" height="950" />
     </state>
     <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1918.948@0.0.1918.948" timestamp="1592275818860" />
-    <state x="557" y="210" key="Vcs.Push.Dialog.v2/0.0.1918.950@0.0.1918.950" timestamp="1592755149069" />
+    <state x="557" y="210" key="Vcs.Push.Dialog.v2/0.0.1918.950@0.0.1918.950" timestamp="1592759122813" />
     <state x="558" y="210" key="Vcs.Push.Dialog.v2/0.0.1920.949@0.0.1920.949" timestamp="1590981410412" />
     <state x="558" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1920.951@0.0.1920.951" timestamp="1592754209651" />
     <state x="617" y="155" width="676" height="636" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1591581522442">
