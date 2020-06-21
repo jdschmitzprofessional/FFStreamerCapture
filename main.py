@@ -1,12 +1,12 @@
-import constants
-import subprocess
-import re
-import stream
-import receive
-import sys
 import logging
+import re
+import subprocess
+import sys
 from logging.handlers import TimedRotatingFileHandler
-import socket
+
+import constants
+import receive
+import stream
 
 
 # figure out which camera/server this is by .the IP address.
