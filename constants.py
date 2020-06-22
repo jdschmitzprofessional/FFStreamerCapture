@@ -18,7 +18,7 @@ cameras = {
         "save_folder": "/mnt/eastgarage",
         "frame_rate": 25,
         "resolution": "1600x900",
-        "bit_rate": "5M",
+        "bit_rate": "3M",
         "loop_duration": 300
         # "restream_address": ""
         # "restream_port": ""
@@ -30,7 +30,7 @@ cameras = {
         "save_folder": "/mnt/porch",
         "frame_rate": 25,
         "resolution": "1400x1050",
-        "bit_rate": "5M",
+        "bit_rate": "3M",
         "loop_duration": 300
     }
 }
