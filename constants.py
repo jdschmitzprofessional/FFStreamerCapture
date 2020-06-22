@@ -28,7 +28,7 @@ cameras = {
         "port": 6001,
         "address": "192.168.50.124",
         "save_folder": "/mnt/porch",
-        "frame_rate": 25,
+        "frame_rate": 20,
         "resolution": "1400x1050",
         "bit_rate": "3M",
         "loop_duration": 300
