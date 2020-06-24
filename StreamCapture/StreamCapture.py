@@ -21,7 +21,7 @@ class CaptureStream:
         self.execute = str
         self.logger = logging.getLogger("FFStreamerCapture." + self.camera_name + ".capture")
         self.logger.setLevel(logging.DEBUG)
-        self.logger.info("\"Instantiated Stream Capture\"")
+        self.logger.info("\"action\": \"Instantiated Stream Capture\"")
         ### port to restream on. Calculates arbitrarily if not provided.
         try:
             self.restream_port = config['restream_port']

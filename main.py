@@ -35,11 +35,12 @@ if __name__ == "__main__":
     logging.basicConfig(format=fileformat, filename=constants.log_path + "/camera.log")
     logger = logging.getLogger("FFStreamerCapture")
     logger.setLevel(logging.DEBUG)
-    logger.info("Initiated FFStreamerCapture")
+    logger.info("\"action\": \"Initiated FFStreamerCapture\"")
     logger.addHandler(handler)
     config = find_config()
     if config == constants.central_server:
-        logger.info("")
+        logger.info("\"role\": \"central_server\"")
         receive.receive(constants.cameras)
     else:
+        logger.info("\"role\": \"remote_camera\"")
         stream.stream(config)
