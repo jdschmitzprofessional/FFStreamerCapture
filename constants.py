@@ -29,7 +29,7 @@ cameras = {
         "address": "192.168.50.124",
         "save_folder": "/mnt/porch",
         "frame_rate": 20,
-        "resolution": "1400x750",
+        "resolution": "1366x768",
         "bit_rate": "3M",
         "loop_duration": 300
     }
