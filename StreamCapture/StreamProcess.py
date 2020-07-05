@@ -53,10 +53,10 @@ class StreamProcess:
                         self.start_time = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
                         self.output_file = self.save_folder + "/" + footage.replace(".h264.finished", ".mp4")
                         execute = "ffmpeg" + \
-                                  " -hwaccel vaapi -hwaccel_output_format vaapi" + \
-                                  " -hwaccel_device /dev/dri/by-path/pci-0000\:0b\:00.0-render" + \
+                                  " -vaapi_device /dev/dri/by-path/pci-0000\:0b\:00.0-render" + \
                                   " -i " + self.source_file + \
-                                  " -c:v h264_vaapi " + self.output_file
+                                  " -vf 'format=nv12,hwupload' " + \
+                                  " -c:v hevc_vaapi " + self.output_file
                         try:
                             subprocess.check_output(execute, shell=True)
                             self.exit_status = "SUCCESS"

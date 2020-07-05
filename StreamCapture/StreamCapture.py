@@ -19,6 +19,7 @@ class CaptureStream:
         self.listen_port = config['port']
         ### set the framerate to force synchronicity
         self.frame_rate = config['frame_rate']
+        self.bit_rate = config['bit_rate']
         ### empty string initialization, populates in capture method
         self.execute = str
         self.logger = logging.getLogger("FFStreamerCapture." + self.camera_name + ".capture")
@@ -50,6 +51,7 @@ class CaptureStream:
                 execute = "ffmpeg" + \
                           " -i \"tcp://" + self.listen_address + ":" + str(self.listen_port) + "?listen\"" + \
                           " -c:v copy" + \
+                          " -b:v " + self.bit_rate + \
                           " -t " + str(self.loop_duration) + \
                           " " + self.buffer + "/" + self.start_time + ".h264" + \
                           " -c:v copy" + \
