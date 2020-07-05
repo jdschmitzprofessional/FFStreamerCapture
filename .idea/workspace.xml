@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6caeb799-f030-4268-8c4f-a0ada73c9652" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JsonConverter/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/JsonConverter/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StreamCamera/StreamCamera.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamCamera/StreamCamera.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StreamCamera/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamCamera/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StreamCapture/StreamCapture.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamCapture/StreamCapture.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StreamCapture/StreamProcess.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamCapture/StreamProcess.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StreamHoster/StreamHoster.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamHoster/StreamHoster.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StreamHoster/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamHoster/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/receive.py" beforeDir="false" afterPath="$PROJECT_DIR$/receive.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream.py" beforeDir="false" afterPath="$PROJECT_DIR$/stream.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

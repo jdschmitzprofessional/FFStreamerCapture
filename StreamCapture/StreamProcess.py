@@ -1,9 +1,10 @@
+import logging
 import os
 import subprocess
 import time
-import logging
-from JsonConverter import JsonConverter
 from datetime import datetime
+
+from JsonConverter import JsonConverter
 
 
 class StreamProcess:
@@ -48,7 +49,7 @@ class StreamProcess:
                 for footage in os.listdir(self.filepath):
                     self.source_file = self.filepath + "/" + footage
                     if "finished" in footage:
-                        self.start_size = os.path.getsize(self.source_file)/1024/1024
+                        self.start_size = os.path.getsize(self.source_file) / 1024 / 1024
                         self.start_time = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
                         self.output_file = self.save_folder + "/" + footage.replace(".h264.finished", ".mp4")
                         execute = "ffmpeg" + \
@@ -59,7 +60,7 @@ class StreamProcess:
                         try:
                             subprocess.check_output(execute, shell=True)
                             self.exit_status = "SUCCESS"
-                            self.end_size = os.path.getsize(self.output_file)/1024/1024
+                            self.end_size = os.path.getsize(self.output_file) / 1024 / 1024
                             self.end_time = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
                             self.compression_difference = int(self.start_size - self.end_size)
                             self.logger.info(self.convert.dump_variables(self.__dict__))

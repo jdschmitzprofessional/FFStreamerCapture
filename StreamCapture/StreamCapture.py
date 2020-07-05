@@ -1,8 +1,10 @@
+import logging
+import os
 import subprocess
 from datetime import datetime as dt
-import logging
+
 import JsonConverter
-import os
+
 
 class CaptureStream:
     def __init__(self, listen=str, config=dict):
@@ -68,5 +70,3 @@ class CaptureStream:
             if "finished" not in file:
                 os.remove(self.buffer + '/' + file)
                 self.logger.info("\"Removed " + file + "\"")
-
-

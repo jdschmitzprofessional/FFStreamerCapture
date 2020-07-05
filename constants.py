@@ -1,5 +1,3 @@
-
-
 # manually designate the central server's IP address. Used on both cameras and central server.
 central_server = '192.168.50.35'
 # path to log
