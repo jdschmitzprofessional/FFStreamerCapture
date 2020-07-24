@@ -23,8 +23,8 @@ def receive(cameras=dict):
                                                         config=constants.cameras[camera])
         encodermap[camera] = StreamCapture.StreamProcess(config=cameras[camera],
                                                          ram_disk='/tmp')
-
-    for camera in cameramap:
-        multiprocessing.Process(target=startRecoring, args=(cameramap[camera],)).start()
+# switched to NFS-based saving scheme
+#    for camera in cameramap:
+#        multiprocessing.Process(target=startRecoring, args=(cameramap[camera],)).start()
     for encoder in encodermap:
         multiprocessing.Process(target=processFootage, args=(encodermap[encoder],)).start()

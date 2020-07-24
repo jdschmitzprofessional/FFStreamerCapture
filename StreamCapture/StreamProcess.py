@@ -63,12 +63,9 @@ class StreamProcess:
                             self.end_size = os.path.getsize(self.output_file) / 1024 / 1024
                             self.end_time = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
                             self.compression_difference = int(self.start_size - self.end_size)
-                            self.logger.info(self.convert.dump_variables(self.__dict__))
                         except subprocess.CalledProcessError:
                             self.exit_status = "FAIL"
-                            self.logger.warning(self.convert.dump_variables(self.__dict__))
                             os.remove(self.source_file)
-                            self.logger.warning("\"Removed " + self.source_file + "\"")
                             continue
                         os.remove(self.filepath + "/" + footage)
 
@@ -77,7 +74,6 @@ class StreamProcess:
                 time.sleep(60)
         except Exception as e:
             self.error = e
-            self.logger.critical(self.convert.dump_variables(self.__dict__))
 
     def sort_output_by_date(self):
         try:
@@ -92,7 +88,6 @@ class StreamProcess:
                     os.rename(self.save_folder + '/' + file, self.save_folder + "/" + file_date + "/" + file)
         except IOError or OSError as e:
             self.error = e
-            self.logger.warning(self.convert.dump_variables(self.__dict__))
         except Exception as e:
             self.error = e
-            self.logger.critical(self.convert.dump_variables(self.__dict__))
+

@@ -11,8 +11,7 @@ log_level = "debug"
 cameras = {
     "eastgaragecam": {
         "name": "eastgarage",
-        "port": 6000,
-        "address": "192.168.50.125",
+        "mount_path": "/tmp/eastgarage",
         "save_folder": "/mnt/eastgarage",
         "frame_rate": 25,
         "resolution": "1600x900",
@@ -23,8 +22,7 @@ cameras = {
     },
     "porchcam": {
         "name": "porch",
-        "port": 6001,
-        "address": "192.168.50.124",
+        "mount_path": "/tmp/porch",
         "save_folder": "/mnt/porch",
         "frame_rate": 25,
         "resolution": "1366x768",

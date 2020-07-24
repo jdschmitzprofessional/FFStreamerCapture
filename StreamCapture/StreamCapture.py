@@ -60,15 +60,14 @@ class CaptureStream:
                 print(execute)
                 subprocess.call(execute, shell=True)
                 self.end_time = dt.now().strftime('%Y-%m-%d-%H-%M-%S')
-                self.logger.info(self.converter.dump_variables(self.__dict__))
                 reprocess = "mv -v /tmp/" + self.camera_name + "/" + self.start_time + ".h264 /tmp/" + self.camera_name + "/" + self.start_time + ".h264.finished"
                 subprocess.call(reprocess, shell=True)
             except Exception as e:
                 self.error = e
-                self.logger.critical(self.converter.dump_variables(self.__dict__))
+                print(e)
 
     def clean_ram_disk(self):
         for file in os.listdir(self.buffer):
             if "finished" not in file:
                 os.remove(self.buffer + '/' + file)
-                self.logger.info("\"Removed " + file + "\"")
+
