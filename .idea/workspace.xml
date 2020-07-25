@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6caeb799-f030-4268-8c4f-a0ada73c9652" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StreamCamera/StreamCamera.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamCamera/StreamCamera.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,13 +105,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1590246291101</updated>
-    </task>
-    <task id="LOCAL-00022" summary="created main class that determines role of device based on config">
-      <created>1590720806278</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1590720806278</updated>
     </task>
     <task id="LOCAL-00023" summary="created main class that determines role of device based on config">
       <created>1590866487752</created>
@@ -449,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595620056778</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="deploying">
+      <created>1595655989696</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1595655989697</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -466,7 +466,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="created main class that determines role of device based on config" />
     <MESSAGE value="gitlabs config added" />
     <MESSAGE value="gitlabs config added, main.py" />
     <MESSAGE value="fixing main" />
@@ -491,7 +490,8 @@
     <MESSAGE value="Code cleanup" />
     <MESSAGE value="h265 encoding-only, different filter" />
     <MESSAGE value="Switched to NFS" />
-    <option name="LAST_COMMIT_MESSAGE" value="Switched to NFS" />
+    <MESSAGE value="deploying" />
+    <option name="LAST_COMMIT_MESSAGE" value="deploying" />
   </component>
   <component name="WindowStateProjectService">
     <state x="593" y="157" key="#Inspections" timestamp="1591749992426">
@@ -502,13 +502,14 @@
       <screen x="0" y="0" width="1918" height="950" />
     </state>
     <state x="852" y="347" width="741" height="485" key="#Notifications/0.0.1918.950@0.0.1918.950" timestamp="1590944644735" />
-    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2" timestamp="1595620056598">
-      <screen x="0" y="0" width="1918" height="948" />
+    <state x="156" y="36" width="747" height="878" key="CommitChangelistDialog2" timestamp="1595655989536">
+      <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1595620056598" />
     <state x="579" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.950@0.0.1918.950" timestamp="1593987298411" />
     <state x="156" y="34" width="761" height="878" key="CommitChangelistDialog2/0.0.1920.949@0.0.1920.949" timestamp="1590981401738" />
     <state x="580" y="34" key="CommitChangelistDialog2/0.0.1920.951@0.0.1920.951" timestamp="1593989311469" />
+    <state x="156" y="36" key="CommitChangelistDialog2/0.0.1920.991@0.0.1920.991" timestamp="1595655989536" />
     <state x="190" y="79" key="DiffContextDialog" timestamp="1590944613279">
       <screen x="0" y="0" width="1918" height="950" />
     </state>
@@ -573,13 +574,14 @@
     <state width="1895" height="301" key="GridCell.Tab.1.right/0.0.1918.950@0.0.1918.950" timestamp="1592754925580" />
     <state width="1897" height="302" key="GridCell.Tab.1.right/0.0.1920.949@0.0.1920.949" timestamp="1590981665036" />
     <state width="1897" height="302" key="GridCell.Tab.1.right/0.0.1920.951@0.0.1920.951" timestamp="1591108895400" />
-    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1595620059404">
-      <screen x="0" y="0" width="1918" height="948" />
+    <state x="558" y="220" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1595655992143">
+      <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1918.948@0.0.1918.948" timestamp="1595620059404" />
     <state x="557" y="210" key="Vcs.Push.Dialog.v2/0.0.1918.950@0.0.1918.950" timestamp="1593007769068" />
     <state x="558" y="210" key="Vcs.Push.Dialog.v2/0.0.1920.949@0.0.1920.949" timestamp="1590981410412" />
     <state x="558" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1920.951@0.0.1920.951" timestamp="1592754209651" />
+    <state x="558" y="220" key="Vcs.Push.Dialog.v2/0.0.1920.991@0.0.1920.991" timestamp="1595655992143" />
     <state x="617" y="155" width="676" height="636" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1591581522442">
       <screen x="0" y="0" width="1918" height="948" />
     </state>

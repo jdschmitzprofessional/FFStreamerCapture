@@ -13,6 +13,7 @@ cameras = {
         "name": "eastgarage",
         "mount_path": "/tmp/eastgarage",
         "save_folder": "/mnt/eastgarage",
+        "address": "192.168.50.125",
         "frame_rate": 25,
         "resolution": "1600x900",
         "bit_rate": "3M",
@@ -25,6 +26,7 @@ cameras = {
         "mount_path": "/tmp/porch",
         "save_folder": "/mnt/porch",
         "frame_rate": 25,
+        "address": "192.168.50.124",
         "resolution": "1366x768",
         "bit_rate": "1.5M",
         "loop_duration": 300
