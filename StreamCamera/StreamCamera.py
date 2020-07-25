@@ -25,7 +25,6 @@ class StreamCamera:
             subprocess.check_call(self.execute, shell=True)
         except subprocess.CalledProcessError:
             time.sleep(3)
-            continue
         try:
             self.execute = f"mv {self.start_time}.h264 {self.start_time}.h264.finished"
             subprocess.check_call(self.execute, shell=True)
