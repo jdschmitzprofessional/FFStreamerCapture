@@ -11,11 +11,12 @@ class StreamCamera:
         self.destination: str = config['mount_path']
         self.frame_rate: int = config['frame_rate']
         self.start_time: str = dt.now().strftime('%Y-%m-%d-%H-%M-%S')
+        self.loop_duration = config['loop_duration']
 
     def record(self):
         self.start_time = dt.now().strftime('%Y-%m-%d-%H-%M-%S')
         self.execute = f"raspivid -ae 14 -a 1036 \
-                        -t 0 \
+                        -t {self.loop_duration} \
                         -w {self.resolution[0]} \
                         -h {self.resolution[1]} \
                         -ih \
@@ -26,7 +27,7 @@ class StreamCamera:
         except subprocess.CalledProcessError:
             time.sleep(3)
         try:
-            self.execute = f"mv {self.start_time}.h264 {self.start_time}.h264.finished"
+            self.execute = f"mv /mnt/storage/{self.start_time}.h264 /mnt/storage/{self.start_time}.h264.finished"
             subprocess.check_call(self.execute, shell=True)
         except subprocess.CalledProcessError:
             pass
