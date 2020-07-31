@@ -4,5 +4,5 @@ stages:
 deploy:
   stage: deploy
   script:
-    - salt -L "porchcam, eastgaragecam" state.sls deploy
-    - salt -L "porchcam, eastgaragecam" service.restart camera
+    - salt -L "porchcam, eastgaragecam, develop" state.sls deploy
+    - salt -L "porchcam, eastgaragecam, develop" service.restart camera

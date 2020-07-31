@@ -19,8 +19,8 @@ def receive(cameras=dict):
     cameramap = {}
     encodermap = {}
     for camera in cameras:
-        cameramap[camera] = StreamCapture.CaptureStream(listen=constants.central_server,
-                                                        config=constants.cameras[camera])
+#        cameramap[camera] = StreamCapture.CaptureStream(listen=constants.central_server,
+#                                                        config=constants.cameras[camera])
         encodermap[camera] = StreamCapture.StreamProcess(config=cameras[camera],
                                                          ram_disk='/tmp')
 # switched to NFS-based saving scheme
