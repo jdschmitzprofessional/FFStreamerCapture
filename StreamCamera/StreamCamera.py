@@ -27,7 +27,7 @@ class StreamCamera:
             while True:
                 camera.annotate_background = Color("black")
                 start = dt.now()
-                self.logout['hostname'] = self.
+                self.logout['hostname'] = self.camera_name
                 self.logout['start'] = str(time.time())
                 self.logout['start_long'] = dt.now().strftime("%H:%M:%S %D")
                 self.logout['resolution'] = str(self.resolution)[1:-1]

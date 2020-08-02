@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6caeb799-f030-4268-8c4f-a0ada73c9652" name="Default Changelist" comment="Changing to picamera, adding logging">
+    <list default="true" id="6caeb799-f030-4268-8c4f-a0ada73c9652" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StreamCamera/StreamCamera.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamCamera/StreamCamera.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StreamCapture/StreamProcess.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamCapture/StreamProcess.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,13 +105,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1590246291101</updated>
-    </task>
-    <task id="LOCAL-00028" summary="gitlabs config added">
-      <created>1590979242765</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1590979242765</updated>
     </task>
     <task id="LOCAL-00029" summary="gitlabs config added, main.py">
       <created>1590980464648</created>
@@ -450,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595692400389</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="Changing to picamera, adding logging">
+      <created>1596345035208</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1596345035208</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -467,7 +466,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Trying to fix a significant quality issue" />
     <MESSAGE value="Changed flow. Now saves stream to file on RAMDisk and allows GPU to process it unconstrained. Significant quality increase and filesize decrease obtained." />
     <MESSAGE value="Changed to use TCP after gratuitous errors" />
     <MESSAGE value="Began logging in json using a basic converter function to ensure compatibility and the self.__dict__ method to print all possible details." />
@@ -492,7 +490,8 @@
     <MESSAGE value="removed extra parameter" />
     <MESSAGE value="removed second call to record" />
     <MESSAGE value="Troubleshooting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Troubleshooting" />
+    <MESSAGE value="Changing to picamera, adding logging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changing to picamera, adding logging" />
   </component>
   <component name="WindowStateProjectService">
     <state x="593" y="157" key="#Inspections" timestamp="1591749992426">
@@ -503,13 +502,13 @@
       <screen x="0" y="0" width="1918" height="950" />
     </state>
     <state x="852" y="347" width="741" height="485" key="#Notifications/0.0.1918.950@0.0.1918.950" timestamp="1590944644735" />
-    <state x="580" y="34" width="747" height="878" key="CommitChangelistDialog2" timestamp="1596344923366">
+    <state x="580" y="34" width="747" height="878" key="CommitChangelistDialog2" timestamp="1596345034986">
       <screen x="0" y="0" width="1920" height="951" />
     </state>
     <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1595620056598" />
     <state x="579" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.950@0.0.1918.950" timestamp="1595692575239" />
     <state x="156" y="34" width="761" height="878" key="CommitChangelistDialog2/0.0.1920.949@0.0.1920.949" timestamp="1590981401738" />
-    <state x="580" y="34" key="CommitChangelistDialog2/0.0.1920.951@0.0.1920.951" timestamp="1596344923366" />
+    <state x="580" y="34" key="CommitChangelistDialog2/0.0.1920.951@0.0.1920.951" timestamp="1596345034986" />
     <state x="156" y="36" key="CommitChangelistDialog2/0.0.1920.991@0.0.1920.991" timestamp="1595657711960" />
     <state x="190" y="79" key="DiffContextDialog" timestamp="1590944613279">
       <screen x="0" y="0" width="1918" height="950" />
@@ -575,13 +574,13 @@
     <state width="1895" height="301" key="GridCell.Tab.1.right/0.0.1918.950@0.0.1918.950" timestamp="1592754925580" />
     <state width="1897" height="302" key="GridCell.Tab.1.right/0.0.1920.949@0.0.1920.949" timestamp="1590981665036" />
     <state width="1897" height="302" key="GridCell.Tab.1.right/0.0.1920.951@0.0.1920.951" timestamp="1591108895400" />
-    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1595692401664">
-      <screen x="0" y="0" width="1918" height="950" />
+    <state x="558" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1596345036870">
+      <screen x="0" y="0" width="1920" height="951" />
     </state>
     <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1918.948@0.0.1918.948" timestamp="1595620059404" />
     <state x="557" y="210" key="Vcs.Push.Dialog.v2/0.0.1918.950@0.0.1918.950" timestamp="1595692401664" />
     <state x="558" y="210" key="Vcs.Push.Dialog.v2/0.0.1920.949@0.0.1920.949" timestamp="1590981410412" />
-    <state x="558" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1920.951@0.0.1920.951" timestamp="1592754209651" />
+    <state x="558" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1920.951@0.0.1920.951" timestamp="1596345036870" />
     <state x="558" y="220" key="Vcs.Push.Dialog.v2/0.0.1920.991@0.0.1920.991" timestamp="1595657714162" />
     <state x="617" y="155" width="676" height="636" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1591581522442">
       <screen x="0" y="0" width="1918" height="948" />
