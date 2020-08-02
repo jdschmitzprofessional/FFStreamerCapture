@@ -50,13 +50,7 @@ class StreamProcess:
                     self.source_file = self.filepath + "/" + footage
                     if "finished" in footage or (".h264" in footage and time.time() - os.path.getmtime(footage) >= (self.loop_duration * 3)):
                         self.process_footage(footage)
-
-
-
-
                 time.sleep(60)
-        except Exception as e:
-            self.error = e
 
     def sort_output_by_date(self):
         try:
