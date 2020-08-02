@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6caeb799-f030-4268-8c4f-a0ada73c9652" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StreamCapture/StreamProcess.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamCapture/StreamProcess.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,13 +105,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1590246291101</updated>
-    </task>
-    <task id="LOCAL-00048" summary="updated bitrate to compensate for higher resolution and increased bandwidth from repeater">
-      <created>1592313753123</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1592313753123</updated>
     </task>
     <task id="LOCAL-00049" summary="Tweaking framerate, one camera struggling with 1600x900 resolution">
       <created>1592314790344</created>
@@ -448,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596387633910</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="Fixed returning false, which terminated the program">
+      <created>1596388363165</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1596388363165</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -465,7 +466,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="deploying" />
     <MESSAGE value="constants update" />
     <MESSAGE value="removed extra parameter" />
     <MESSAGE value="removed second call to record" />
@@ -490,7 +490,8 @@
     <MESSAGE value="Trying to make split_recording work" />
     <MESSAGE value="Readjusting loop duration, changed StreamProcess.py to handle &quot;abandoned&quot; files." />
     <MESSAGE value="Fixed the cameras moving the new file instead of old." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the cameras moving the new file instead of old." />
+    <MESSAGE value="Fixed returning false, which terminated the program" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed returning false, which terminated the program" />
   </component>
   <component name="WindowStateProjectService">
     <state x="593" y="157" key="#Inspections" timestamp="1591749992426">
@@ -501,10 +502,10 @@
       <screen x="0" y="0" width="1918" height="950" />
     </state>
     <state x="852" y="347" width="741" height="485" key="#Notifications/0.0.1918.950@0.0.1918.950" timestamp="1590944644735" />
-    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2" timestamp="1596387633821">
+    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2" timestamp="1596388363078">
       <screen x="0" y="0" width="1918" height="948" />
     </state>
-    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1596387633821" />
+    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1596388363078" />
     <state x="579" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.950@0.0.1918.950" timestamp="1596349654036" />
     <state x="156" y="34" width="761" height="878" key="CommitChangelistDialog2/0.0.1920.949@0.0.1920.949" timestamp="1590981401738" />
     <state x="580" y="34" key="CommitChangelistDialog2/0.0.1920.951@0.0.1920.951" timestamp="1596347692286" />
@@ -573,10 +574,10 @@
     <state width="1895" height="301" key="GridCell.Tab.1.right/0.0.1918.950@0.0.1918.950" timestamp="1592754925580" />
     <state width="1897" height="302" key="GridCell.Tab.1.right/0.0.1920.949@0.0.1920.949" timestamp="1590981665036" />
     <state width="1897" height="302" key="GridCell.Tab.1.right/0.0.1920.951@0.0.1920.951" timestamp="1591108895400" />
-    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1596387635918">
+    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1596388364090">
       <screen x="0" y="0" width="1918" height="948" />
     </state>
-    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1918.948@0.0.1918.948" timestamp="1596387635918" />
+    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1918.948@0.0.1918.948" timestamp="1596388364090" />
     <state x="557" y="210" key="Vcs.Push.Dialog.v2/0.0.1918.950@0.0.1918.950" timestamp="1596349655079" />
     <state x="558" y="210" key="Vcs.Push.Dialog.v2/0.0.1920.949@0.0.1920.949" timestamp="1590981410412" />
     <state x="558" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1920.951@0.0.1920.951" timestamp="1596347693747" />

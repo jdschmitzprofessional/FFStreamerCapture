@@ -40,8 +40,8 @@ class StreamProcess:
         self.current_date = datetime.now().strftime('%Y-%m-%d')
 
     def process(self):
-        try:
-            while True:
+        while True:
+            try:
                 self.error = None
                 if self.current_date != datetime.now().strftime('%Y-%m-%d'):
                     self.current_date = datetime.now().strftime('%Y-%m-%d')
@@ -90,5 +90,4 @@ class StreamProcess:
             self.compression_difference = int(self.start_size - self.end_size)
         except subprocess.CalledProcessError:
             self.exit_status = "FAIL"
-            os.remove(self.source_file)
         os.remove(self.filepath + "/" + footage)
