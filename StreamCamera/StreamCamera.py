@@ -9,7 +9,7 @@ import picamera
 
 class StreamCamera:
     def __init__(self,
-                 config: dict[str,]):
+                 config: dict):
         self.camera_name = config['name']
         self.resolution: list[int] = config['resolution'].lower().split("x")
         self.bit_rate: str = config['bit_rate']
