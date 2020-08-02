@@ -51,10 +51,10 @@ class StreamCamera:
                         except subprocess.CalledProcessError as e:
                             self.logout['Exception'] = str(e)
                             self.logger.warning(json.dumps(self.logout))
-                except Exception as e:
-                    self.logout['Exception'] = str(e)
-                    self.logger.critical(json.dumps(self.logout))
-                    camera.stop_recording()
-                    return False
+            except Exception as e:
+                self.logout['Exception'] = str(e)
+                self.logger.critical(json.dumps(self.logout))
+                camera.stop_recording()
+                return False
 
 
