@@ -53,6 +53,7 @@ class StreamProcess:
 
 
 
+
                 time.sleep(60)
         except Exception as e:
             self.error = e
@@ -90,5 +91,4 @@ class StreamProcess:
         except subprocess.CalledProcessError:
             self.exit_status = "FAIL"
             os.remove(self.source_file)
-            return False
         os.remove(self.filepath + "/" + footage)
