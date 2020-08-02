@@ -16,7 +16,7 @@ class StreamCamera:
         self.mount_path: str = config['mount_path']
         self.frame_rate: int = config['frame_rate']
         self.start_time: str = dt.now().strftime(constants.date_format)
-        self.loop_duration = config['loop_duration']
+        self.loop_duration: int = config['loop_duration']
         self.logout: dict[str, str] = {}
         self.logger = logging.getLogger("FFStreamerCapture." + self.camera_name + ".post")
         self.logger.setLevel(logging.DEBUG)
@@ -35,7 +35,7 @@ class StreamCamera:
                 self.logout['file'] = filename
                 camera.start_recording(str(filename))
                 while True:
-                    while time.time() - self.logout['start'] <= self.loop_duration:
+                    while time.time() - int(self.logout['start']) <= self.loop_duration:
                         camera.annotate_text = dt.now().strftime(constants.short_date_format)
                         self.logout['stop'] = str(time.time())
                         self.logout['stop_long'] = dt.now().strftime(constants.short_date_format)
