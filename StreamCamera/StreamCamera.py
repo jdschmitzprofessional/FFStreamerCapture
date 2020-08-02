@@ -2,6 +2,7 @@ import json
 import logging
 import time
 from datetime import datetime as dt
+import subprocess
 import picamera
 
 
@@ -31,14 +32,18 @@ class StreamCamera:
                 self.logout['resolution'] = str(self.resolution)[1:-1]
                 filename = f"/mnt/storage/{dt.now().strftime('%Y-%m-%d-%H-%M-%S')}.h264"
                 self.logout['file'] = filename
-                # try:
-                camera.start_recording(str(filename))
-                while (dt.now() - start).seconds < self.loop_duration:
-                    camera.annotate_text = dt.now().strftime("%H:%M:%S %D")
-                    camera.wait_recording(0.2)
                 self.logout['stop'] = str(time.time())
                 self.logout['stop_long'] = dt.now().strftime("%H:%M:%S %D")
                 self.logger.info(json.dumps(self.logout))
-                # except Exception as e:
-                #     self.logout['Exception'] = str(e)
-                #     self.logger.critical(json.dumps(self.logout))
+                try:
+                    camera.start_recording(str(filename))
+                    camera.annotate_text = dt.now().strftime("%H:%M:%S %D")
+                    camera.wait_recording(self.loop_duration)
+                except Exception as e:
+                    self.logout['Exception'] = str(e)
+                    self.logger.critical(json.dumps(self.logout))
+                try:
+                    subprocess.call(f"mv /mnt/storage/{filename} /mnt/storage/{filename}.finished", shell=True)
+                except subprocess.CalledProcessError:
+                    pass
+
