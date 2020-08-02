@@ -5,8 +5,7 @@ import sys
 from logging.handlers import TimedRotatingFileHandler
 
 import constants
-import receive
-import stream
+
 
 
 # figure out which camera/server this is by .the IP address.
@@ -40,7 +39,9 @@ if __name__ == "__main__":
     config = find_config()
     if config == constants.central_server:
         logger.info("\"role\": \"central_server\"")
+        import receive
         receive.receive(constants.cameras)
     else:
         logger.info("\"role\": \"remote_camera\"")
+        import stream
         stream.stream(config)

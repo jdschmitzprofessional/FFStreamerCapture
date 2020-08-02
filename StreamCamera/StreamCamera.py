@@ -1,12 +1,8 @@
 import json
 import logging
-import subprocess
 import time
 from datetime import datetime as dt
-try:
-    import picamera
-except ImportError:
-    pass
+import picamera
 
 
 
@@ -26,7 +22,7 @@ class StreamCamera:
         self.logger.info("\"Instantiated Stream Processor\"")
 
     def record(self):
-        with PiCamera() as camera:
+        with picamera.PiCamera() as camera:
             while True:
                 camera.annotate_background = Color("black")
                 start = dt.now()
