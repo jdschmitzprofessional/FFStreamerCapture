@@ -10,15 +10,15 @@ from JsonConverter import JsonConverter
 #TODO: Clean up thsi file, stop using self.__dict__ for logging
 class StreamProcess:
     def __init__(self, config=dict, ram_disk=str):
-        self.loop_duration = config['loop_duration']
+        self.loop_duration: int = config['loop_duration']
         self.convert = JsonConverter
-        self.cameraName = config['name']
-        self.bit_rate = config['bit_rate']
+        self.cameraName: str = config['name']
+        self.bit_rate: str = config['bit_rate']
         self.logger = logging.getLogger("FFStreamerCapture." + self.cameraName + ".post")
         self.logger.setLevel(logging.DEBUG)
         self.logger.info("\"Instantiated Stream Processor\"")
-        self.save_folder = config['save_folder']
-        self.filepath = ram_disk + "/" + self.cameraName
+        self.save_folder: str = config['save_folder']
+        self.filepath: str = ram_disk + "/" + self.cameraName
         try:
             if not os.path.exists(self.filepath):
                 os.mkdir(self.filepath)
@@ -28,29 +28,30 @@ class StreamProcess:
             self.error = e
             self.logger.warning(JsonConverter.dump_variables())
         # logging variables
-        self.start_size = None
-        self.end_size = int
-        self.start_time = int
-        self.end_time = None
-        self.source_file = None
-        self.output_file = None
-        self.exit_status = None
-        self.error = None
-        self.compression_difference = int
-        self.current_date = datetime.now().strftime('%Y-%m-%d')
+        self.start_size: int = 0
+        self.end_size: int = 0
+        self.start_time: int = 0
+        self.end_time: int = 0
+        self.source_file: str = ""
+        self.output_file: str = ""
+        self.exit_status: str = ""
+        self.error: str = ""
+        self.compression_difference: int = ""
+        self.current_date: str = datetime.now().strftime('%Y-%m-%d')
 
     def process(self):
         while True:
-            try:
-                self.error = None
-                if self.current_date != datetime.now().strftime('%Y-%m-%d'):
-                    self.current_date = datetime.now().strftime('%Y-%m-%d')
-                    self.sort_output_by_date()
-                for footage in os.listdir(self.filepath):
-                    self.source_file = self.filepath + "/" + footage
-                    if "finished" in footage or (".h264" in footage and time.time() - os.path.getmtime(footage) >= (self.loop_duration * 3)):
-                        self.process_footage(footage)
-                time.sleep(60)
+            self.error = ""
+            if self.current_date != datetime.now().strftime('%Y-%m-%d'):
+                self.current_date = datetime.now().strftime('%Y-%m-%d')
+                self.sort_output_by_date()
+            for footage in os.listdir(self.filepath):
+                self.source_file = self.filepath + "/" + footage
+                print(f"{self.source_file}")
+                if "finished" in footage or (".h264" in footage and time.time() - os.path.getmtime(f"{self.source_file}") >= (self.loop_duration * 3)):
+                    self.process_footage(footage)
+            time.sleep(60)
+
 
     def sort_output_by_date(self):
         try:

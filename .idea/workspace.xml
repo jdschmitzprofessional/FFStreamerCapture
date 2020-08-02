@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6caeb799-f030-4268-8c4f-a0ada73c9652" name="Default Changelist" comment="">
+    <list default="true" id="6caeb799-f030-4268-8c4f-a0ada73c9652" name="Default Changelist" comment="Fixed deprecated code being left in">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StreamCapture/StreamProcess.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamCapture/StreamProcess.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,13 +105,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1590246291101</updated>
-    </task>
-    <task id="LOCAL-00050" summary="Reducing bitrate, excessive file size">
-      <created>1592667658778</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1592667658779</updated>
     </task>
     <task id="LOCAL-00051" summary="changed path to video card after hardware changes, removed bitrate from hardware encoding command as it was matching that of the cameras, actually causing an increased filesize.">
       <created>1592755147303</created>
@@ -448,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596388571912</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="Fixed deprecated code being left in">
+      <created>1596388852466</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1596388852466</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -465,7 +466,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="removed extra parameter" />
     <MESSAGE value="removed second call to record" />
     <MESSAGE value="Troubleshooting" />
     <MESSAGE value="Changing to picamera, adding logging" />
@@ -490,7 +490,8 @@
     <MESSAGE value="Fixed the cameras moving the new file instead of old." />
     <MESSAGE value="Fixed returning false, which terminated the program" />
     <MESSAGE value="Reorganizing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reorganizing" />
+    <MESSAGE value="Fixed deprecated code being left in" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed deprecated code being left in" />
   </component>
   <component name="WindowStateProjectService">
     <state x="593" y="157" key="#Inspections" timestamp="1591749992426">
@@ -501,10 +502,10 @@
       <screen x="0" y="0" width="1918" height="950" />
     </state>
     <state x="852" y="347" width="741" height="485" key="#Notifications/0.0.1918.950@0.0.1918.950" timestamp="1590944644735" />
-    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2" timestamp="1596388571812">
+    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2" timestamp="1596389253831">
       <screen x="0" y="0" width="1918" height="948" />
     </state>
-    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1596388571812" />
+    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1596389253831" />
     <state x="579" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.950@0.0.1918.950" timestamp="1596349654036" />
     <state x="156" y="34" width="761" height="878" key="CommitChangelistDialog2/0.0.1920.949@0.0.1920.949" timestamp="1590981401738" />
     <state x="580" y="34" key="CommitChangelistDialog2/0.0.1920.951@0.0.1920.951" timestamp="1596347692286" />
@@ -513,37 +514,37 @@
       <screen x="0" y="0" width="1918" height="950" />
     </state>
     <state x="190" y="79" key="DiffContextDialog/0.0.1918.950@0.0.1918.950" timestamp="1590944613279" />
-    <state width="1897" height="260" key="GridCell.Tab.0.bottom" timestamp="1594577858847">
-      <screen x="0" y="0" width="1920" height="951" />
+    <state width="947" height="258" key="GridCell.Tab.0.bottom" timestamp="1596389420509">
+      <screen x="0" y="0" width="1918" height="948" />
     </state>
-    <state width="1895" height="292" key="GridCell.Tab.0.bottom/0.0.1918.948@0.0.1918.948" timestamp="1593187826274" />
+    <state width="947" height="258" key="GridCell.Tab.0.bottom/0.0.1918.948@0.0.1918.948" timestamp="1596389420509" />
     <state width="1895" height="260" key="GridCell.Tab.0.bottom/0.0.1918.950@0.0.1918.950" timestamp="1594337621300" />
     <state width="1896" height="242" key="GridCell.Tab.0.bottom/0.0.1919.949@0.0.1919.949" timestamp="1590695681059" />
     <state width="1897" height="292" key="GridCell.Tab.0.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1591883904953" />
     <state width="1897" height="212" key="GridCell.Tab.0.bottom/0.0.1920.949@0.0.1920.949" timestamp="1591154798445" />
     <state width="1897" height="260" key="GridCell.Tab.0.bottom/0.0.1920.951@0.0.1920.951" timestamp="1594577858847" />
-    <state width="1897" height="260" key="GridCell.Tab.0.center" timestamp="1594577858847">
-      <screen x="0" y="0" width="1920" height="951" />
+    <state width="947" height="258" key="GridCell.Tab.0.center" timestamp="1596389420508">
+      <screen x="0" y="0" width="1918" height="948" />
     </state>
-    <state width="1895" height="292" key="GridCell.Tab.0.center/0.0.1918.948@0.0.1918.948" timestamp="1593187826273" />
+    <state width="947" height="258" key="GridCell.Tab.0.center/0.0.1918.948@0.0.1918.948" timestamp="1596389420508" />
     <state width="1895" height="260" key="GridCell.Tab.0.center/0.0.1918.950@0.0.1918.950" timestamp="1594337621299" />
     <state width="1896" height="242" key="GridCell.Tab.0.center/0.0.1919.949@0.0.1919.949" timestamp="1590695681056" />
     <state width="1897" height="292" key="GridCell.Tab.0.center/0.0.1920.1044@0.0.1920.1044" timestamp="1591883904953" />
     <state width="1897" height="212" key="GridCell.Tab.0.center/0.0.1920.949@0.0.1920.949" timestamp="1591154798444" />
     <state width="1897" height="260" key="GridCell.Tab.0.center/0.0.1920.951@0.0.1920.951" timestamp="1594577858847" />
-    <state width="1897" height="260" key="GridCell.Tab.0.left" timestamp="1594577858845">
-      <screen x="0" y="0" width="1920" height="951" />
+    <state width="947" height="258" key="GridCell.Tab.0.left" timestamp="1596389420507">
+      <screen x="0" y="0" width="1918" height="948" />
     </state>
-    <state width="1895" height="292" key="GridCell.Tab.0.left/0.0.1918.948@0.0.1918.948" timestamp="1593187826273" />
+    <state width="947" height="258" key="GridCell.Tab.0.left/0.0.1918.948@0.0.1918.948" timestamp="1596389420507" />
     <state width="1895" height="260" key="GridCell.Tab.0.left/0.0.1918.950@0.0.1918.950" timestamp="1594337621299" />
     <state width="1896" height="242" key="GridCell.Tab.0.left/0.0.1919.949@0.0.1919.949" timestamp="1590695681056" />
     <state width="1897" height="292" key="GridCell.Tab.0.left/0.0.1920.1044@0.0.1920.1044" timestamp="1591883904952" />
     <state width="1897" height="212" key="GridCell.Tab.0.left/0.0.1920.949@0.0.1920.949" timestamp="1591154798444" />
     <state width="1897" height="260" key="GridCell.Tab.0.left/0.0.1920.951@0.0.1920.951" timestamp="1594577858845" />
-    <state width="1897" height="260" key="GridCell.Tab.0.right" timestamp="1594577858847">
-      <screen x="0" y="0" width="1920" height="951" />
+    <state width="947" height="258" key="GridCell.Tab.0.right" timestamp="1596389420508">
+      <screen x="0" y="0" width="1918" height="948" />
     </state>
-    <state width="1895" height="292" key="GridCell.Tab.0.right/0.0.1918.948@0.0.1918.948" timestamp="1593187826274" />
+    <state width="947" height="258" key="GridCell.Tab.0.right/0.0.1918.948@0.0.1918.948" timestamp="1596389420508" />
     <state width="1895" height="260" key="GridCell.Tab.0.right/0.0.1918.950@0.0.1918.950" timestamp="1594337621300" />
     <state width="1896" height="242" key="GridCell.Tab.0.right/0.0.1919.949@0.0.1919.949" timestamp="1590695681058" />
     <state width="1897" height="292" key="GridCell.Tab.0.right/0.0.1920.1044@0.0.1920.1044" timestamp="1591883904953" />
@@ -573,10 +574,10 @@
     <state width="1895" height="301" key="GridCell.Tab.1.right/0.0.1918.950@0.0.1918.950" timestamp="1592754925580" />
     <state width="1897" height="302" key="GridCell.Tab.1.right/0.0.1920.949@0.0.1920.949" timestamp="1590981665036" />
     <state width="1897" height="302" key="GridCell.Tab.1.right/0.0.1920.951@0.0.1920.951" timestamp="1591108895400" />
-    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1596388572664">
+    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1596388856684">
       <screen x="0" y="0" width="1918" height="948" />
     </state>
-    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1918.948@0.0.1918.948" timestamp="1596388572664" />
+    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1918.948@0.0.1918.948" timestamp="1596388856684" />
     <state x="557" y="210" key="Vcs.Push.Dialog.v2/0.0.1918.950@0.0.1918.950" timestamp="1596349655079" />
     <state x="558" y="210" key="Vcs.Push.Dialog.v2/0.0.1920.949@0.0.1920.949" timestamp="1590981410412" />
     <state x="558" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1920.951@0.0.1920.951" timestamp="1596347693747" />
