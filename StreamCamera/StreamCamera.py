@@ -43,7 +43,7 @@ class StreamCamera:
                     self.logout['Exception'] = str(e)
                     self.logger.critical(json.dumps(self.logout))
                 try:
-                    subprocess.call(f"mv /mnt/storage/{filename} /mnt/storage/{filename}.finished", shell=True)
+                    subprocess.call(f"mv {filename} {filename}.finished", shell=True)
                 except subprocess.CalledProcessError:
                     pass
 
