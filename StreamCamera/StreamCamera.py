@@ -18,7 +18,7 @@ class StreamCamera:
         self.logout: dict[str, str] = {}
         self.logger = logging.getLogger("FFStreamerCapture." + self.camera_name + ".post")
         self.logger.setLevel(logging.DEBUG)
-        self.logger.info("\"Instantiated Stream Processor\"")
+        self.logger.info("\"Instantiated Remote Camera\"")
 
     def record(self):
         with picamera.PiCamera() as camera:
@@ -29,17 +29,16 @@ class StreamCamera:
                 self.logout['start'] = str(time.time())
                 self.logout['start_long'] = dt.now().strftime("%H:%M:%S %D")
                 self.logout['resolution'] = str(self.resolution)[1:-1]
-                camera.start_preview()
                 filename = f"/mnt/storage/{dt.now().strftime('%Y-%m-%d-%H-%M-%S')}.h264"
                 self.logout['file'] = filename
-                try:
-                    camera.start_recording(str(filename))
-                    while (dt.now() - start).seconds < self.loop_duration:
-                        camera.annotate_text = dt.now().strftime("%H:%M:%S %D")
-                        camera.wait_recording(0.2)
-                    self.logout['stop'] = str(time.time())
-                    self.logout['stop_long'] = dt.now().strftime("%H:%M:%S %D")
-                    self.logger.info(json.dumps(self.logout))
-                except Exception as e:
-                    self.logout['Exception'] = str(e)
-                    self.logger.critical(json.dumps(self.logout))
+                # try:
+                camera.start_recording(str(filename))
+                while (dt.now() - start).seconds < self.loop_duration:
+                    camera.annotate_text = dt.now().strftime("%H:%M:%S %D")
+                    camera.wait_recording(0.2)
+                self.logout['stop'] = str(time.time())
+                self.logout['stop_long'] = dt.now().strftime("%H:%M:%S %D")
+                self.logger.info(json.dumps(self.logout))
+                # except Exception as e:
+                #     self.logout['Exception'] = str(e)
+                #     self.logger.critical(json.dumps(self.logout))
