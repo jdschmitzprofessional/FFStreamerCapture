@@ -3,6 +3,8 @@ central_server = '192.168.50.35'
 # path to log
 log_path = "/var/log/camera"
 log_level = "debug"
+date_format = "%Y-%m-%d-%H-%M-%S"
+short_date_format = "%H:%M:%S %D"
 # camera names must be unique for logging purposes.
 # port must be unique
 # address must be unique IPv4
@@ -17,7 +19,7 @@ cameras = {
         "frame_rate": 25,
         "resolution": "1600x900",
         "bit_rate": "3M",
-        "loop_duration": 600000
+        "loop_duration": 120
         # "restream_address": ""
         # "restream_port": ""
     },
@@ -29,6 +31,6 @@ cameras = {
         "address": "192.168.50.124",
         "resolution": "1366x768",
         "bit_rate": "1.5M",
-        "loop_duration": 600000
+        "loop_duration": 120
     }
 }

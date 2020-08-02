@@ -4,6 +4,7 @@ import time
 from datetime import datetime as dt
 import subprocess
 import picamera
+import constants
 
 
 class StreamCamera:
@@ -14,7 +15,7 @@ class StreamCamera:
         self.bit_rate: str = config['bit_rate']
         self.mount_path: str = config['mount_path']
         self.frame_rate: int = config['frame_rate']
-        self.start_time: str = dt.now().strftime('%Y-%m-%d-%H-%M-%S')
+        self.start_time: str = dt.now().strftime(constants.date_format)
         self.loop_duration = config['loop_duration']
         self.logout: dict[str, str] = {}
         self.logger = logging.getLogger("FFStreamerCapture." + self.camera_name + ".post")
@@ -23,27 +24,31 @@ class StreamCamera:
 
     def record(self):
         with picamera.PiCamera() as camera:
-            while True:
+
                 camera.annotate_background = picamera.Color("black")
-                start = dt.now()
                 self.logout['hostname'] = self.camera_name
-                self.logout['start'] = str(time.time())
-                self.logout['start_long'] = dt.now().strftime("%H:%M:%S %D")
                 self.logout['resolution'] = str(self.resolution)[1:-1]
-                filename = f"/mnt/storage/{dt.now().strftime('%Y-%m-%d-%H-%M-%S')}.h264"
-                self.logout['file'] = filename
-                self.logout['stop'] = str(time.time())
-                self.logout['stop_long'] = dt.now().strftime("%H:%M:%S %D")
-                self.logger.info(json.dumps(self.logout))
-                try:
-                    camera.start_recording(str(filename))
-                    camera.annotate_text = dt.now().strftime("%H:%M:%S %D")
-                    camera.wait_recording(self.loop_duration)
-                except Exception as e:
-                    self.logout['Exception'] = str(e)
-                    self.logger.critical(json.dumps(self.logout))
-                try:
-                    subprocess.call(f"mv {filename} {filename}.finished", shell=True)
-                except subprocess.CalledProcessError:
-                    pass
+                while True:
+                    self.logout['start'] = str(time.time())
+                    self.logout['start_long'] = dt.now().strftime(constants.short_date_format)
+                    try:
+                        filename = f"/mnt/storage/{dt.now().strftime(constants.date_format)}.h264"
+                        self.logout['file'] = filename
+                        camera.start_recording(str(filename))
+                        camera.annotate_text = dt.now().strftime(constants.short_date_format)
+                        camera.wait_recording(self.loop_duration)
+                        self.logout['stop'] = str(time.time())
+                        self.logout['stop_long'] = dt.now().strftime(constants.short_date_format)
+                        self.logger.info(json.dumps(self.logout))
+                        filename = f"/mnt/storage/{dt.now().strftime(constants.date_format)}.h264"
+                        self.logout['file'] = filename
+                        camera.split_recording(filename)
+                    except Exception as e:
+                        self.logout['Exception'] = str(e)
+                        self.logger.critical(json.dumps(self.logout))
+                    try:
+                        subprocess.call(f"mv {filename} {filename}.finished", shell=True)
+                    except subprocess.CalledProcessError as e:
+                        self.logout['Exception'] = str(e)
+                        self.logger.critical(json.dumps(self.logout))
 

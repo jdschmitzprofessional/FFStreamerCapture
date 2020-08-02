@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6caeb799-f030-4268-8c4f-a0ada73c9652" name="Default Changelist" comment="">
+    <list default="true" id="6caeb799-f030-4268-8c4f-a0ada73c9652" name="Default Changelist" comment="Switching to using split_recording to avoid downtime between loops.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StreamCamera/StreamCamera.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamCamera/StreamCamera.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,13 +106,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1590246291101</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Changed to use TCP after gratuitous errors">
-      <created>1591672353313</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1591672353313</updated>
     </task>
     <task id="LOCAL-00043" summary="Began logging in json using a basic converter function to ensure compatibility and the self.__dict__ method to print all possible details.">
       <created>1591744859305</created>
@@ -449,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596349654123</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="Corrected a path">
+      <created>1596382063668</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1596382063669</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -466,7 +467,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="adjusting bitrate" />
     <MESSAGE value="adjusting framerate" />
     <MESSAGE value="adjusting resolution" />
     <MESSAGE value="Code cleanup" />
@@ -491,7 +491,8 @@
     <MESSAGE value="Attempting to fix permission error writing output file" />
     <MESSAGE value="Removing try/except for debugging" />
     <MESSAGE value="Re-adding try/except" />
-    <option name="LAST_COMMIT_MESSAGE" value="Re-adding try/except" />
+    <MESSAGE value="Corrected a path" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrected a path" />
   </component>
   <component name="WindowStateProjectService">
     <state x="593" y="157" key="#Inspections" timestamp="1591749992426">
@@ -502,10 +503,10 @@
       <screen x="0" y="0" width="1918" height="950" />
     </state>
     <state x="852" y="347" width="741" height="485" key="#Notifications/0.0.1918.950@0.0.1918.950" timestamp="1590944644735" />
-    <state x="579" y="34" width="747" height="878" key="CommitChangelistDialog2" timestamp="1596349654036">
-      <screen x="0" y="0" width="1918" height="950" />
+    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2" timestamp="1596383305906">
+      <screen x="0" y="0" width="1918" height="948" />
     </state>
-    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1595620056598" />
+    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1596383305906" />
     <state x="579" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.950@0.0.1918.950" timestamp="1596349654036" />
     <state x="156" y="34" width="761" height="878" key="CommitChangelistDialog2/0.0.1920.949@0.0.1920.949" timestamp="1590981401738" />
     <state x="580" y="34" key="CommitChangelistDialog2/0.0.1920.951@0.0.1920.951" timestamp="1596347692286" />
@@ -574,10 +575,10 @@
     <state width="1895" height="301" key="GridCell.Tab.1.right/0.0.1918.950@0.0.1918.950" timestamp="1592754925580" />
     <state width="1897" height="302" key="GridCell.Tab.1.right/0.0.1920.949@0.0.1920.949" timestamp="1590981665036" />
     <state width="1897" height="302" key="GridCell.Tab.1.right/0.0.1920.951@0.0.1920.951" timestamp="1591108895400" />
-    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1596349655079">
-      <screen x="0" y="0" width="1918" height="950" />
+    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1596382065202">
+      <screen x="0" y="0" width="1918" height="948" />
     </state>
-    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1918.948@0.0.1918.948" timestamp="1595620059404" />
+    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1918.948@0.0.1918.948" timestamp="1596382065202" />
     <state x="557" y="210" key="Vcs.Push.Dialog.v2/0.0.1918.950@0.0.1918.950" timestamp="1596349655079" />
     <state x="558" y="210" key="Vcs.Push.Dialog.v2/0.0.1920.949@0.0.1920.949" timestamp="1590981410412" />
     <state x="558" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1920.951@0.0.1920.951" timestamp="1596347693747" />
