@@ -12,7 +12,7 @@ class StreamCamera:
         self.camera_name = config['name']
         self.resolution: list[int] = config['resolution'].lower().split("x")
         self.bit_rate: str = config['bit_rate']
-        self.destination: str = config['mount_path']
+        self.mount_path: str = config['mount_path']
         self.frame_rate: int = config['frame_rate']
         self.start_time: str = dt.now().strftime('%Y-%m-%d-%H-%M-%S')
         self.loop_duration = config['loop_duration']
