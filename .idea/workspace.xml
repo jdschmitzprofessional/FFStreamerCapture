@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6caeb799-f030-4268-8c4f-a0ada73c9652" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StreamCamera/StreamCamera.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamCamera/StreamCamera.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StreamCapture/StreamProcess.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamCapture/StreamProcess.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
     </list>
@@ -107,13 +106,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1590246291101</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Updated gitlab-ci.yml to restart application">
-      <created>1591996595869</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1591996595869</updated>
     </task>
     <task id="LOCAL-00046" summary="updated resolution to 1600x900">
       <created>1592275400329</created>
@@ -451,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596384151298</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="Trying to make split_recording work">
+      <created>1596386670242</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1596386670242</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -468,7 +467,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Code cleanup" />
     <MESSAGE value="h265 encoding-only, different filter" />
     <MESSAGE value="Switched to NFS" />
     <MESSAGE value="deploying" />
@@ -493,7 +491,8 @@
     <MESSAGE value="Corrected a path" />
     <MESSAGE value="Switching to using split_recording to avoid downtime between loops. Adjusted logging." />
     <MESSAGE value="Adjustments to tweak" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjustments to tweak" />
+    <MESSAGE value="Trying to make split_recording work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to make split_recording work" />
   </component>
   <component name="WindowStateProjectService">
     <state x="593" y="157" key="#Inspections" timestamp="1591749992426">
@@ -504,10 +503,10 @@
       <screen x="0" y="0" width="1918" height="950" />
     </state>
     <state x="852" y="347" width="741" height="485" key="#Notifications/0.0.1918.950@0.0.1918.950" timestamp="1590944644735" />
-    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2" timestamp="1596384151217">
+    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2" timestamp="1596386670153">
       <screen x="0" y="0" width="1918" height="948" />
     </state>
-    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1596384151217" />
+    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1596386670153" />
     <state x="579" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.950@0.0.1918.950" timestamp="1596349654036" />
     <state x="156" y="34" width="761" height="878" key="CommitChangelistDialog2/0.0.1920.949@0.0.1920.949" timestamp="1590981401738" />
     <state x="580" y="34" key="CommitChangelistDialog2/0.0.1920.951@0.0.1920.951" timestamp="1596347692286" />
@@ -576,10 +575,10 @@
     <state width="1895" height="301" key="GridCell.Tab.1.right/0.0.1918.950@0.0.1918.950" timestamp="1592754925580" />
     <state width="1897" height="302" key="GridCell.Tab.1.right/0.0.1920.949@0.0.1920.949" timestamp="1590981665036" />
     <state width="1897" height="302" key="GridCell.Tab.1.right/0.0.1920.951@0.0.1920.951" timestamp="1591108895400" />
-    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1596384153168">
+    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1596386671358">
       <screen x="0" y="0" width="1918" height="948" />
     </state>
-    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1918.948@0.0.1918.948" timestamp="1596384153168" />
+    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1918.948@0.0.1918.948" timestamp="1596386671358" />
     <state x="557" y="210" key="Vcs.Push.Dialog.v2/0.0.1918.950@0.0.1918.950" timestamp="1596349655079" />
     <state x="558" y="210" key="Vcs.Push.Dialog.v2/0.0.1920.949@0.0.1920.949" timestamp="1590981410412" />
     <state x="558" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1920.951@0.0.1920.951" timestamp="1596347693747" />

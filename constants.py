@@ -20,7 +20,7 @@ cameras = {
         "frame_rate": 25,
         "resolution": "1600x900",
         "bit_rate": "3M",
-        "loop_duration": 120
+        "loop_duration": 300
         # "restream_address": ""
         # "restream_port": ""
     },
@@ -32,6 +32,6 @@ cameras = {
         "address": "192.168.50.124",
         "resolution": "1366x768",
         "bit_rate": "1.5M",
-        "loop_duration": 120
+        "loop_duration": 300
     }
 }
