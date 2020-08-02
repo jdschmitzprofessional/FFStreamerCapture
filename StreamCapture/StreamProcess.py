@@ -3,12 +3,14 @@ import os
 import subprocess
 import time
 from datetime import datetime
+import constants
 
 from JsonConverter import JsonConverter
 
 
 class StreamProcess:
     def __init__(self, config=dict, ram_disk=str):
+        self.loop_duration = config['loop_duration']
         self.convert = JsonConverter
         self.cameraName = config['name']
         self.bit_rate = config['bit_rate']
@@ -50,8 +52,7 @@ class StreamProcess:
                         self.start_size = os.path.getsize(self.source_file) / 1024 / 1024
                         self.start_time = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
                         self.output_file = self.save_folder + "/" + footage.replace(".h264.finished", ".mp4")
-                        execute = "ffmpeg" + \
-                                  " -vaapi_device /dev/dri/by-path/pci-0000\:0b\:00.0-render" + \
+                        execute = f"ffmpeg -vaapi_device /dev/dri/by-path/pci-0000\:0b\:00.0-render" + \
                                   " -i " + self.source_file + \
                                   " -vf 'format=nv12,hwupload' " + \
                                   " -c:v hevc_vaapi " + self.output_file
@@ -68,7 +69,7 @@ class StreamProcess:
                         os.remove(self.filepath + "/" + footage)
 
                     else:
-                        continue
+                        if time.time() - os.path.getmtime(footage) >=
                 time.sleep(60)
         except Exception as e:
             self.error = e

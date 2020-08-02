@@ -5,6 +5,7 @@ log_path = "/var/log/camera"
 log_level = "debug"
 date_format = "%Y-%m-%d-%H-%M-%S"
 short_date_format = "%H:%M:%S %D"
+render_device = "/dev/dri/by-path/pci-0000\:0b\:00.0-render"
 # camera names must be unique for logging purposes.
 # port must be unique
 # address must be unique IPv4
