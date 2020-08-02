@@ -48,7 +48,8 @@ class StreamProcess:
             for footage in os.listdir(self.filepath):
                 self.source_file = self.filepath + "/" + footage
                 print(f"{self.source_file}")
-                if "finished" in footage or (".h264" in footage and time.time() - os.path.getmtime(f"{self.source_file}") >= (self.loop_duration * 3)):
+                print(str(time.time() - os.path.getmtime(self.source_file)), self.loop_duration)
+                if "finished" in footage or ".h264" in footage and time.time() - os.path.getmtime(self.source_file) >= (self.loop_duration * 3):
                     self.process_footage(footage)
             time.sleep(60)
 
