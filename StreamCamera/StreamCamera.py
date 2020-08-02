@@ -3,7 +3,10 @@ import logging
 import subprocess
 import time
 from datetime import datetime as dt
-import picamera
+try:
+    import picamera
+except ImportError:
+    pass
 
 
 
