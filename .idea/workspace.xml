@@ -105,13 +105,6 @@
       <option name="presentableId" value="Default" />
       <updated>1590246291101</updated>
     </task>
-    <task id="LOCAL-00061" summary="adjusting porch resolution">
-      <created>1592771107742</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1592771107742</updated>
-    </task>
     <task id="LOCAL-00062" summary="adjusting porch resolution">
       <created>1592771616140</created>
       <option name="number" value="00062" />
@@ -448,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596392020238</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="Fixing CPU Utilization issue">
+      <created>1596392313983</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1596392313983</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -501,10 +501,10 @@
       <screen x="0" y="0" width="1918" height="950" />
     </state>
     <state x="852" y="347" width="741" height="485" key="#Notifications/0.0.1918.950@0.0.1918.950" timestamp="1590944644735" />
-    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2" timestamp="1596392020132">
+    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2" timestamp="1596392313907">
       <screen x="0" y="0" width="1918" height="948" />
     </state>
-    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1596392020132" />
+    <state x="156" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.948@0.0.1918.948" timestamp="1596392313907" />
     <state x="579" y="34" width="747" height="878" key="CommitChangelistDialog2/0.0.1918.950@0.0.1918.950" timestamp="1596349654036" />
     <state x="156" y="34" width="761" height="878" key="CommitChangelistDialog2/0.0.1920.949@0.0.1920.949" timestamp="1590981401738" />
     <state x="580" y="34" key="CommitChangelistDialog2/0.0.1920.951@0.0.1920.951" timestamp="1596347692286" />
@@ -573,10 +573,10 @@
     <state width="1895" height="301" key="GridCell.Tab.1.right/0.0.1918.950@0.0.1918.950" timestamp="1592754925580" />
     <state width="1897" height="302" key="GridCell.Tab.1.right/0.0.1920.949@0.0.1920.949" timestamp="1590981665036" />
     <state width="1897" height="302" key="GridCell.Tab.1.right/0.0.1920.951@0.0.1920.951" timestamp="1591108895400" />
-    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1596392021216">
+    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1596392314760">
       <screen x="0" y="0" width="1918" height="948" />
     </state>
-    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1918.948@0.0.1918.948" timestamp="1596392021216" />
+    <state x="557" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1918.948@0.0.1918.948" timestamp="1596392314760" />
     <state x="557" y="210" key="Vcs.Push.Dialog.v2/0.0.1918.950@0.0.1918.950" timestamp="1596349655079" />
     <state x="558" y="210" key="Vcs.Push.Dialog.v2/0.0.1920.949@0.0.1920.949" timestamp="1590981410412" />
     <state x="558" y="210" width="800" height="527" key="Vcs.Push.Dialog.v2/0.0.1920.951@0.0.1920.951" timestamp="1596347693747" />

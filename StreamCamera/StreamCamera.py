@@ -25,8 +25,9 @@ class StreamCamera:
     def record(self):
         with picamera.PiCamera() as camera:
             camera.annotate_background = picamera.Color("black")
+            camera.resolution = (self.resolution[0], self.resolution[1])
             self.logout['hostname'] = self.camera_name
-            self.logout['resolution'] = str(self.resolution)[1:-1]
+            self.logout['resolution'] = str(camera.resolution)
             self.logout['start'] = str(time.time())
             self.logout['start_long'] = dt.now().strftime(constants.short_date_format)
 
