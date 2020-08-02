@@ -5,7 +5,6 @@ from datetime import datetime as dt
 import picamera
 
 
-
 class StreamCamera:
     def __init__(self,
                  config: dict):
@@ -34,7 +33,7 @@ class StreamCamera:
                 filename = f"/mnt/storage/{dt.now().strftime('%Y-%m-%d-%H-%M-%S')}.h264"
                 self.logout['file'] = filename
                 try:
-                    camera.start_recording(filename)
+                    camera.start_recording(str(filename))
                     while (dt.now() - start).seconds < self.loop_duration:
                         camera.annotate_text = dt.now().strftime("%H:%M:%S %D")
                         camera.wait_recording(0.2)
@@ -44,5 +43,3 @@ class StreamCamera:
                 except Exception as e:
                     self.logout['Exception'] = str(e)
                     self.logger.critical(json.dumps(self.logout))
-
-
