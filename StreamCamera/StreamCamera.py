@@ -42,7 +42,7 @@ class StreamCamera:
                     self.logout['stop_long'] = dt.now().strftime("%H:%M:%S %D")
                     self.logger.info(json.dumps(self.logout))
                 except Exception as e:
-                    self.logout['Exception'] = str(Exception)
+                    self.logout['Exception'] = str(e)
                     self.logger.critical(json.dumps(self.logout))
 
 
