@@ -24,7 +24,7 @@ class StreamCamera:
     def record(self):
         with picamera.PiCamera() as camera:
             while True:
-                camera.annotate_background = Color("black")
+                camera.annotate_background = picamera.Color("black")
                 start = dt.now()
                 self.logout['hostname'] = self.camera_name
                 self.logout['start'] = str(time.time())
