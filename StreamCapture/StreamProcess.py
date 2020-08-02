@@ -7,7 +7,7 @@ import constants
 
 from JsonConverter import JsonConverter
 
-
+#TODO: Clean up thsi file, stop using self.__dict__ for logging
 class StreamProcess:
     def __init__(self, config=dict, ram_disk=str):
         self.loop_duration = config['loop_duration']

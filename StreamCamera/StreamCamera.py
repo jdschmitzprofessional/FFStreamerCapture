@@ -42,11 +42,12 @@ class StreamCamera:
                     self.logger.info(json.dumps(self.logout))
                     self.logout['start'] = str(time.time())
                     self.logout['start_long'] = dt.now().strftime(constants.short_date_format)
+                    old_filename = filename
                     filename = f"/mnt/storage/{dt.now().strftime(constants.date_format)}.h264"
                     self.logout['file'] = filename
                     camera.split_recording(filename)
                     try:
-                        subprocess.call(f"mv {filename} {filename}.finished", shell=True)
+                        subprocess.call(f"mv {old_filename} {old_filename}.finished", shell=True)
                     except subprocess.CalledProcessError as e:
                         self.logout['Exception'] = str(e)
                         self.logger.warning(json.dumps(self.logout))
