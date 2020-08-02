@@ -21,7 +21,7 @@ class StreamCamera:
         self.start_time: str = dt.now().strftime('%Y-%m-%d-%H-%M-%S')
         self.loop_duration = config['loop_duration']
         self.logout: dict[str, str] = {}
-        self.logger = logging.getLogger("FFStreamerCapture." + self.cameraName + ".post")
+        self.logger = logging.getLogger("FFStreamerCapture." + self.camera_name + ".post")
         self.logger.setLevel(logging.DEBUG)
         self.logger.info("\"Instantiated Stream Processor\"")
 
