@@ -24,31 +24,33 @@ class StreamCamera:
 
     def record(self):
         with picamera.PiCamera() as camera:
+            camera.annotate_background = picamera.Color("black")
+            self.logout['hostname'] = self.camera_name
+            self.logout['resolution'] = str(self.resolution)[1:-1]
+            self.logout['start'] = str(time.time())
+            self.logout['start_long'] = dt.now().strftime(constants.short_date_format)
 
-                camera.annotate_background = picamera.Color("black")
-                self.logout['hostname'] = self.camera_name
-                self.logout['resolution'] = str(self.resolution)[1:-1]
+            try:
+                filename = f"/mnt/storage/{dt.now().strftime(constants.date_format)}.h264"
+                self.logout['file'] = filename
+                camera.start_recording(str(filename))
+                camera.annotate_text = dt.now().strftime(constants.short_date_format)
+
                 while True:
-                    self.logout['start'] = str(time.time())
-                    self.logout['start_long'] = dt.now().strftime(constants.short_date_format)
-                    try:
-                        filename = f"/mnt/storage/{dt.now().strftime(constants.date_format)}.h264"
-                        self.logout['file'] = filename
-                        camera.start_recording(str(filename))
-                        camera.annotate_text = dt.now().strftime(constants.short_date_format)
-                        camera.wait_recording(self.loop_duration)
-                        self.logout['stop'] = str(time.time())
-                        self.logout['stop_long'] = dt.now().strftime(constants.short_date_format)
-                        self.logger.info(json.dumps(self.logout))
-                        filename = f"/mnt/storage/{dt.now().strftime(constants.date_format)}.h264"
-                        self.logout['file'] = filename
-                        camera.split_recording(filename)
-                    except Exception as e:
-                        self.logout['Exception'] = str(e)
-                        self.logger.critical(json.dumps(self.logout))
+                    camera.wait_recording(self.loop_duration)
+                    self.logout['stop'] = str(time.time())
+                    self.logout['stop_long'] = dt.now().strftime(constants.short_date_format)
+                    self.logger.info(json.dumps(self.logout))
+                    filename = f"/mnt/storage/{dt.now().strftime(constants.date_format)}.h264"
+                    self.logout['file'] = filename
+                    camera.split_recording(filename)
                     try:
                         subprocess.call(f"mv {filename} {filename}.finished", shell=True)
                     except subprocess.CalledProcessError as e:
                         self.logout['Exception'] = str(e)
                         self.logger.critical(json.dumps(self.logout))
+            except Exception as e:
+                self.logout['Exception'] = str(e)
+                self.logger.critical(json.dumps(self.logout))
+
 
