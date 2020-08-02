@@ -31,7 +31,7 @@ class StreamCamera:
                 self.logout['start_long'] = dt.now().strftime("%H:%M:%S %D")
                 self.logout['resolution'] = str(self.resolution)[1:-1]
                 camera.start_preview()
-                filename = f"{self.mount_path}/{dt.now().strftime('%Y-%m-%d-%H-%M-%S')}.h264"
+                filename = f"/mnt/storage/{dt.now().strftime('%Y-%m-%d-%H-%M-%S')}.h264"
                 self.logout['file'] = filename
                 try:
                     camera.start_recording(filename)
@@ -42,7 +42,7 @@ class StreamCamera:
                     self.logout['stop_long'] = dt.now().strftime("%H:%M:%S %D")
                     self.logger.info(json.dumps(self.logout))
                 except Exception as e:
-                    self.logout['Exception'] = Exception
+                    self.logout['Exception'] = str(Exception)
                     self.logger.critical(json.dumps(self.logout))
 
 
