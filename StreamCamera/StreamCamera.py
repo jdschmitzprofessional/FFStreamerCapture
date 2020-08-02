@@ -35,7 +35,8 @@ class StreamCamera:
                 self.logout['file'] = filename
                 camera.start_recording(str(filename))
                 while True:
-                    while time.time() - float(self.logout['start']) <= self.loop_duration:
+                    start = time.time
+                    while time.time() - start <= self.loop_duration:
                         camera.annotate_text = dt.now().strftime(constants.short_date_format)
                         camera.wait_recording(0.5)
                     self.logout['stop'] = str(time.time())
