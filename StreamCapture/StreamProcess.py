@@ -15,9 +15,7 @@ class StreamProcess:
         self.logger = logging.getLogger("FFStreamerCapture." + self.cameraName + ".post")
         self.logger.setLevel(logging.DEBUG)
         self.logger.info("\"Instantiated Stream Processor\"")
-        # folder to save files to
         self.save_folder = config['save_folder']
-        # construct filepath to ramdisk for temporary storage
         self.filepath = ram_disk + "/" + self.cameraName
         try:
             if not os.path.exists(self.filepath):
